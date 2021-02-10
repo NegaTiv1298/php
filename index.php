@@ -1,7 +1,8 @@
 <?php
-$arr = [3, 3, -1, -2, 3, -3];
-$arr1 = [];
-foreach ($arr as $elem) {
-    $arr1[] = abs($elem);
-}
-var_dump($arr1);
+$a = 4;
+$b = [1, 2, 3, 5, 6, 10, 15, 30];
+$arr = [];
+foreach ($b as $elem) {
+        $arr[] = ($a%$elem==0);
+    }
+var_dump($arr);
