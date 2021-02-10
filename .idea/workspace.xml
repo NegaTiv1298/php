@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0afa1a3b-7d68-4b6f-bbd0-f4e38d2d8082" name="Default Changelist" comment="Ex.6.12">
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1o23SSXFrnhqPE8Sz74ddH4LLMQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OSPanel\domains\php" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0afa1a3b-7d68-4b6f-bbd0-f4e38d2d8082" name="Default Changelist" comment="" />
+      <created>1612470864494</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612470864494</updated>
+      <workItem from="1612470866681" duration="3474000" />
+      <workItem from="1612474353451" duration="8000" />
+      <workItem from="1612529025325" duration="4676000" />
+      <workItem from="1612642661373" duration="1470000" />
+      <workItem from="1612686622226" duration="9051000" />
+      <workItem from="1612796605394" duration="7804000" />
+      <workItem from="1612879586256" duration="1962000" />
+      <workItem from="1612881557519" duration="6553000" />
+      <workItem from="1612953411836" duration="8132000" />
+      <workItem from="1612972992322" duration="1856000" />
+      <workItem from="1612988407561" duration="1959000" />
+    </task>
+    <task id="LOCAL-00001" summary="Test Commit">
+      <created>1612973555798</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1612973555798</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Ex.6.12">
+      <created>1612973751524</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1612973751524</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Test Commit" />
+    <MESSAGE value="Ex.6.12" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ex.6.12" />
+  </component>
+</project>
