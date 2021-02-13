@@ -1,3 +1,3 @@
 <?php
-$str = '/php/';
-echo trim($str, '/');
+$str = 'слова слова слова.';
+echo rtrim($str, '.'). '.';
