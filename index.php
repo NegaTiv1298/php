@@ -1,7 +1,7 @@
 <?php
-$a = 'smile.jpg';
-if ('.png' == substr($a, -4) || '.jpg' == substr($a, -4)) {
-    echo 'Да';
+$a = 'smile.png';
+if (strlen($a) <= 5) {
+    echo $a;
 } else {
-    echo 'Нет';
+    echo substr($a, 5). '...';
 }
