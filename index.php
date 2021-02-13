@@ -1,3 +1,3 @@
 <?php
 $str = 'abc abc abc';
-echo strrpos($str, 'b');
+echo strpos($str, 'b', 3);
