@@ -1,3 +1,3 @@
 <?php
-$str = '1234567890  ';
-echo rtrim($str);
+$str = '/php/';
+echo trim($str, '/');
