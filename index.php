@@ -1,3 +1,7 @@
 <?php
-$str = 'aaa aaa aaa aaa aaa';
-echo strpos($str, ' ', 4);
+$str = 'ab..c';
+if (strpos($str, '..')) {
+    echo 'Да';
+} else {
+    echo 'Нет';
+}
