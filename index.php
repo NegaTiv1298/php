@@ -1,3 +1,3 @@
 <?php
-$str = 'abc abc abc';
-echo strpos($str, 'b', 3);
+$str = 'aaa aaa aaa aaa aaa';
+echo strpos($str, ' ', 4);
