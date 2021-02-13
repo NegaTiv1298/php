@@ -1,7 +1,4 @@
 <?php
-$str = 'http://old.code.mu';
-if (strpos($str, 'http://') == 0) {
-    echo 'Да';
-} else {
-    echo 'Нет';
-}
+$str = 'html css php';
+$arr = explode( ' ', $str);
+var_dump($arr);
