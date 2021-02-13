@@ -1,3 +1,3 @@
 <?php
-$str = 'Ukraine123';
-echo substr_replace($str, '!!!', 3, 5);
+$str = 'abc abc abc';
+echo strpos($str, 'b');
