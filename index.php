@@ -1,4 +1,3 @@
 <?php
-$str = 'html css php';
-$arr = explode( ' ', $str);
-var_dump($arr);
+$arr = ['html', 'css', 'php'];
+echo implode( ', ', $arr);
