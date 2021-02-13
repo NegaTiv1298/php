@@ -1,6 +1,6 @@
 <?php
-$a = 'http://old.code.mu';
-if (strpos( $a, 'http://') === 0 || strpos( $a, 'https://') === 0) {
+$a = 'smile.png';
+if ('.png' == substr($a, -4)) {
     echo 'Да';
 } else {
     echo 'Нет';
