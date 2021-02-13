@@ -1,4 +1,4 @@
 <?php
-$str = '2013-12-31';
-$arr = explode('-', $str);
-echo  $arr[2]. '.'. $arr[1]. '.'. $arr[0]. '.';
+$str = '1234567890';
+$arr = str_split($str, 2);
+var_dump($arr);
