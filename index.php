@@ -1,3 +1,5 @@
 <?php
-$str = '12345678';
-echo number_format($str, 0, ' ', ' ');
+$str = 'x';
+for ($i = 1; $i <= 9; $i++, $str++) {
+    echo str_repeat('x', $i). '<br>';
+}
