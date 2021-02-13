@@ -1,3 +1,3 @@
 <?php
-$str = 'слова слова слова.';
-echo rtrim($str, '.'). '.';
+$str = '12345';
+echo strrev($str);
