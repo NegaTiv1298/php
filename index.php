@@ -1,3 +1,2 @@
 <?php
-$str = 'html, <b>php</b>, js';
-echo htmlspecialchars($str);
+echo ord('a'). ' '. ord('b'). ' '. ord('c'). ' '. ord(' ');
