@@ -1,2 +1,2 @@
 <?php
-echo ord('a'). ' '. ord('b'). ' '. ord('c'). ' '. ord(' ');
+echo chr(33);
