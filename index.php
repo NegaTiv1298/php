@@ -1,3 +1,3 @@
 <?php
 $str = 'ab-cd-ef';
-echo strchr($str, '-');
+echo strrchr($str, '-');
