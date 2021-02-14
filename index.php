@@ -1,3 +1,7 @@
 <?php
-$str = chr(mt_rand(65, 90));
-echo $str;
+$str = ord('c');
+if ($str >= 65 && $str <=90) {
+    echo $str. ' - Большая буква';
+} else {
+    echo $str. ' - Маленькая буква';
+}
