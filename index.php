@@ -1,3 +1,3 @@
 <?php
-$str = 'html, <b>php</b>, js';
-echo strip_tags($str);
+$str = 'html, <b>php</b>, <i>js</i>';
+echo strip_tags($str, '<b>'. '<i></i>');
