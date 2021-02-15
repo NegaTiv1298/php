@@ -1,4 +1,7 @@
 <?php
-$str = 'var_test_text';
-$arr = explode('_', $str);
-echo $arr[0] . ucfirst($arr[1]) . ucfirst($arr[2]);
+$arr = [3, 11, 23, 42, 16, 37];
+foreach ($arr as $elem) {
+    if (strpos($elem, '3') !== false) {
+        echo $elem. '<br>';
+    }
+}
