@@ -1,3 +1,4 @@
 <?php
-$arr = ['a', 'b', 'c', 'd', 'e'];
-echo $arr[count($arr) - 1];
+$arr = [1, 2, 3, 4, 5];
+$result = in_array('2', $arr);
+var_dump($result);
