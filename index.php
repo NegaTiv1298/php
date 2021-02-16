@@ -1,4 +1,3 @@
 <?php
-$arr = range(1, 9);
-$result = implode('-', $arr);
-echo $result;
+$arr = range(1, 100);
+echo array_sum($arr);
