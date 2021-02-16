@@ -1,6 +1,3 @@
 <?php
-$arr = [1, 2, 3, 4, 5];
-$result = array_splice($arr, 1, 0, ['a','b'] );
-$result2 = array_splice($arr, 6, 0, 'c');
-$result3 = array_splice($arr, 8, 0, 'e');
-var_dump($arr);
+$arr = ['a'=>1, 'b'=>2, 'c'=>3];
+var_dump(array_flip($arr));
