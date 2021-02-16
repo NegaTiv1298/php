@@ -1,3 +1,4 @@
 <?php
-$arr = range('a', 'z');
-var_dump($arr);
+$arr = range(1, 9);
+$result = implode('-', $arr);
+echo $result;
