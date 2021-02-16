@@ -1,3 +1,4 @@
 <?php
-$arr = [1, 2, 3, 4, 5];
-var_dump(array_reverse($arr));
+$arr = ['a', '-', 'b', '-', 'c', '-', 'd'];
+$result = array_search('-', $arr);
+var_dump($result);
