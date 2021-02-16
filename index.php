@@ -1,3 +1,3 @@
 <?php
-$arr = [2, 3, 5, 7];
-echo count($arr);
+$arr = ['a', 'b', 'c', 'd', 'e'];
+echo $arr[count($arr) - 1];
