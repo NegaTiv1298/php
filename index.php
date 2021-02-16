@@ -1,4 +1,3 @@
 <?php
-$arr = [1, 2, 3, 4, 5];
-$result = (array_sum($arr) / count($arr));
-var_dump($result);
+$arr = range(1, 100);
+var_dump($arr);
