@@ -1,4 +1,4 @@
 <?php
-$arr = [' a ', ' b ', ' с '];
-$result = array_map('trim', $arr);
-var_dump($result);
+$arr = [1, 2, 3, 4, 5];
+$arr2 = [3, 4, 5, 6, 7];
+var_dump(array_intersect($arr, $arr2));
