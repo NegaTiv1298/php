@@ -1,4 +1,4 @@
 <?php
-$arr = [1, 2, 3, 4, 5];
-$arr2 = [3, 4, 5, 6, 7];
-var_dump(array_diff($arr, $arr2));
+$str = '1234567890';
+$arr = str_split($str, 1);
+echo array_sum($arr);
