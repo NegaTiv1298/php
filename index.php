@@ -1,4 +1,4 @@
 <?php
-$arr = range(1, 25);
+$arr = range('a', 'z');
 shuffle($arr);
 var_dump($arr);
