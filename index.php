@@ -1,4 +1,11 @@
 <?php
-$arr = [1, 2, 3, 4, 5];
-array_unshift($arr, 0) && array_push($arr, 6);
-var_dump($arr);
+$arr = [1, 2, 3, 4, 5, 6, 7, 8];
+
+$str = '';
+while (count($arr) > 0) {
+    $str .= array_shift($arr);
+    $str .= array_pop($arr);
+}
+
+echo $str;
+// Воспользувався рішенням. До конця не поняв.
