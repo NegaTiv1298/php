@@ -1,6 +1,4 @@
 <?php
-$arr = ['a', '-', 'b', '-', 'c', '-', 'd'];
-$result = array_search('-', $arr);
+$arr = ['a', 'b', 'c', 'd', 'e'];
+$result = array_replace($arr, [0=>'!', 3=>'!!']);
 var_dump($result);
-$result2 = array_splice($arr, 2);
-var_dump($result2);
