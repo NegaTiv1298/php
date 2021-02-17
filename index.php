@@ -1,5 +1,4 @@
 <?php
 $arr = [1, 2, 3, 4, 5];
-$result = array_shift($arr); // Последний элемент так же только через array_pop.
-echo($result). '<br>';
+array_unshift($arr, 0) && array_push($arr, 6);
 var_dump($arr);
