@@ -1,3 +1,4 @@
 <?php
-$arr = [1, 2, 3, 4, 5];
-var_dump(array_map('sqrt', $arr));
+$arr = ['<b>php</b>', '<i>html</i>'];
+$result = array_map('strip_tags', $arr);
+var_dump($result);
