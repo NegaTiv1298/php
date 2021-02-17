@@ -1,4 +1,4 @@
 <?php
-$arr = ['<b>php</b>', '<i>html</i>'];
-$result = array_map('strip_tags', $arr);
+$arr = [' a ', ' b ', ' с '];
+$result = array_map('trim', $arr);
 var_dump($result);
