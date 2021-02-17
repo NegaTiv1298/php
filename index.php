@@ -1,4 +1,4 @@
 <?php
-$arr = ['a'=>1, 'b'=>2, 'c'=>3];
-$key = array_rand($arr);
-echo $arr[$key];
+$arr = [1, 2, 3, 4, 5];
+shuffle($arr);
+var_dump ($arr);
