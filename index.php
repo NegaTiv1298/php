@@ -1,4 +1,3 @@
 <?php
-$arr = range(1, 20);
-var_dump (array_chunk($arr, 4));
-
+$arr = ['a', 'b', 'c', 'b', 'a'];
+var_dump(array_count_values($arr));
