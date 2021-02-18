@@ -1,4 +1,2 @@
 <?php
-$arr = range(1, 100);
-$str = implode('<br>', $arr);
-echo $str;
+var_dump(array_fill(0, 10, 'x'));
