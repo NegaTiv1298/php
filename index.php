@@ -1,4 +1,4 @@
 <?php
-$arr = range(1, 9);
-$result = array_chunk($arr, 3);
-var_dump($result);
+$arr = [1, 2, 4, 5, 5];
+$arr = ($arr = array_unique($arr))[count($arr)-2];
+var_dump($arr);
