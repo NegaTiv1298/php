@@ -1,5 +1,4 @@
 <?php
-$arr = range(1, 26);
-$arr2 = range('a', 'z');
-$result = array_combine($arr2, $arr);
-var_dump($result);
+$str = '1234567890';
+$arr = str_split($str, 2);
+var_dump(array_sum($arr));
