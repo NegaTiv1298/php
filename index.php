@@ -1,4 +1,4 @@
 <?php
-$arr = range(1, 10);
-$result = array_product($arr);
-var_dump($result);
+$str = '4321';
+$arr = str_split($str);
+var_dump(array_sum($arr));
