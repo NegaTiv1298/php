@@ -1,5 +1,4 @@
 <?php
-$arr = range(1, 26);
-$arr2 = range ('a', 'z');
-$arr3 = array_combine($arr2, $arr);
-var_dump($arr3);
+$arr = range(1, 9);
+$result = array_chunk($arr, 3);
+var_dump($result);
