@@ -1,2 +1,4 @@
 <?php
-var_dump(array_fill(0, 10, 'x'));
+$arr = range(1, 10);
+shuffle($arr);
+var_dump($arr);
