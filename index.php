@@ -1,4 +1,5 @@
 <?php
-$arr = [1, 2, 3, 4, 9];
-$arr2 = array_map('sqrt', $arr);
-var_dump($arr2);
+$arr = range(1, 26);
+$arr2 = range('a', 'z');
+$result = array_combine($arr2, $arr);
+var_dump($result);
