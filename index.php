@@ -1,9 +1,15 @@
+<?php
+if (!isset($_REQUEST['age'])) {
+?>
 <form action="" method="get">
-    <input placeholder="Введите имя" type="text" name="name">
+    <input placeholder="Введите возраст" type="text" name="age">
     <input type="submit" name="sumbit">
 </form>
+    <?php
+}
+    ?>
 <?php
-if (isset($_REQUEST['name'])) {
-    $name = strip_tags($_REQUEST['name']);
-    echo 'Привет, '. $name;
+if (isset($_REQUEST['age'])) {
+    $age = strip_tags($_REQUEST['age']);
+echo $age;
 }
