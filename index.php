@@ -1,18 +1,10 @@
-<form action="" method="get">
-    <input placeholder="Введите логин" type="text" name="login">
-    <input placeholder="Введите пароль" type="password" name="pass">
-    <input type="submit" name="sumbit">
+<form action="" method="GET">
+    <input name="name" value="<?php if (isset($_GET['name'])) echo $_GET['name']; ?>">
+    <input type="submit">
 </form>
-
 <?php
-if (isset($_REQUEST['login']) && $_REQUEST['pass']) {
-    $login = 'user';
-    $pass = '12345';
-    $flogin = trim($_REQUEST['login']);
-    $fpass = trim($_REQUEST['pass']);
-    if ($login == $flogin && $pass == $fpass) {
-        echo 'Доступ разрешен';
-    } else {
-        echo 'Доступ запрещен';
-    }
+if (isset($_REQUEST['submit'])) {
+    $name = $_REQUEST['name'];
+    echo $name;
 }
+?>
