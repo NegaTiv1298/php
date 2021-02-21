@@ -1,9 +1,16 @@
-<form action="" method="get">
-    <input type="text" placeholder="Введите дату и время" name="date1">
-    <input type="submit" name="sumbit">
-</form>
 <?php
-if (isset($_REQUEST['date1'])) {
-    $date1 = trim(strip_tags($_REQUEST['date1']));
-    echo date('H:i:s d.m.Y', strtotime($date1));
-}
+$date = date_create('2025-12-31');
+date_modify($date, '2 days');
+echo date_format($date, 'Y-m-d');
+echo '<br>';
+$date = date_create('2025-12-31');
+date_modify($date, '1 month, 3 days');
+echo date_format($date, 'Y-m-d');
+echo '<br>';
+$date = date_create('2025-12-31');
+date_modify($date, '1 year');
+echo date_format($date, 'Y-m-d');
+echo '<br>';
+$date = date_create('2025-12-31');
+date_modify($date, '-3 days');
+echo date_format($date, 'Y-m-d');
