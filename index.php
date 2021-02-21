@@ -5,6 +5,5 @@
 <?php
 if (isset($_REQUEST['date1'])) {
     $date1 = trim(strip_tags($_REQUEST['date1']));
-    $strtime = strtotime($date1);
-    echo date('H:i:s d.m.Y', $strtime);
+    echo date('H:i:s d.m.Y', strtotime($date1));
 }
