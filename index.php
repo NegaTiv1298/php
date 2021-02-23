@@ -1,15 +1,14 @@
 <?php
-function delitel($x)
-{
-    for ($i = 2; $i < $x; $i++) {
-        if ($x % $i == 0) {
-            return true;
-        }
+$num = [1, 2, 3, 4, 5, 6];
+$flag = false;
+$kol = count($num);
+for ($i = 1; $i <= $kol; $i++) {
+    if ($num[$i] == $num[$i - 1]) {
+        $flag = true;
+        break;
     }
-    return false;
 }
-$num = 31;
-if (delitel($num)) {
+if ($flag) {
     echo 'True';
 } else {
     echo 'False';
