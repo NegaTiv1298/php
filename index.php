@@ -1,5 +1,10 @@
 <?php
-function kv($num, $num2, $num3)
+function dW($day)
 {
-    return ($num - $num2)/$num3;
+    $week = [1 => 'sn', 'mn', 'tu', 'wd', 'th', 'fr', 'st'];
+    if ($day >= 1 && $day <=7){
+        return $week[$day];
+    } else {
+        return 'False';
+    }
 }
