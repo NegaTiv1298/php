@@ -1,14 +1,16 @@
 <?php
-$arr = ['1', '2', '3', '4', '5'];
-$flag = False;
-foreach ($arr as $elem) {
-    if ($elem == 5) {
-        $flag = True;
-        break;
+function delitel($x)
+{
+    for ($i = 2; $i < $x; $i++) {
+        if ($x % $i == 0) {
+            return true;
+        }
     }
+    return false;
 }
-if ($flag === true) {
-    echo 'Да';
+$num = 31;
+if (delitel($num)) {
+    echo 'True';
 } else {
-    echo 'Нет';
+    echo 'False';
 }
