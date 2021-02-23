@@ -1,10 +1,14 @@
 <?php
-function dW($day)
-{
-    $week = [1 => 'sn', 'mn', 'tu', 'wd', 'th', 'fr', 'st'];
-    if ($day >= 1 && $day <=7){
-        return $week[$day];
-    } else {
-        return 'False';
+$arr = ['1', '2', '3', '4', '5'];
+$flag = False;
+foreach ($arr as $elem) {
+    if ($elem == 5) {
+        $flag = True;
+        break;
     }
+}
+if ($flag === true) {
+    echo 'Да';
+} else {
+    echo 'Нет';
 }
