@@ -1,5 +1,5 @@
 <?php
-function kv($num)
+function kv($num, $num2)
 {
-    return $num * $num;
+    return $num + $num2;
 }
