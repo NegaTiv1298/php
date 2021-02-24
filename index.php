@@ -1,5 +1,5 @@
 <?php
-function ab($a, $b)
+function ab($a)
 {
-    return ($a + $b) > 10;
+    return $a < 0;
 }
