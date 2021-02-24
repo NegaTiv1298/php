@@ -1,12 +1,9 @@
 <?php
-$arr = [];
-
-for ($i = 1; $i <= 9; $i++) {
-    $str = '';
-    for ($j = 1; $j <= $i; $j++) {
-        $str .= $i;
+function arrayFill($param, $param2)
+{
+    $result = [];
+    for ($i = 1; $i <= $param2; $i++) {
+        $result[] = $param;
     }
-
-    $arr[] = $str;
+    return $result;
 }
-var_dump($arr);
