@@ -1,11 +1,10 @@
 <?php
-$arr = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]];
-$sum = 0;
-foreach ($arr as $elem) {
-    foreach ($elem as $subElem) {
-        foreach ($subElem as $subsubElem) {
-            $sum += $subsubElem;
-        }
+$arr = [];
+$count = 1;
+for ($i = 0; $i < 3; $i++) {
+    for ($j = 0; $j < 3; $j++) {
+        $arr[$i][$j] = $count;
+        $count++;
     }
+    var_dump($arr);
 }
-echo $sum;
