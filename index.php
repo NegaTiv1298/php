@@ -1,8 +1,6 @@
 <?php
 $str = '';
-$arr = [];
-for ($i = 1; $i <= 9; $i++) {
-    $arr[] .= $i;
+for ($i = 1; $i <= 20; $i++) {
+    $str .= 'x';
+    echo $str. '<br>';
 }
-$str = implode('-', $arr);
-echo '-'. $str. '-';
