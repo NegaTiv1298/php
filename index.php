@@ -1,8 +1,7 @@
 <?php
 $str = '';
-for ($i = 1; $i <= 9; $i++) {
-    for ($j = 1; $j <= $i; $j++) {
-        echo $i;
-    }
-    echo '<br>';
+for ($i = 1; $i <= 5; $i++) {
+    $str .= 'xx';
+    echo $str. '<br>';
 }
+
