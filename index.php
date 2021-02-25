@@ -1,16 +1,16 @@
 <?php
-function isEven($num)
+function getDivisors($num)
 {
-    if ($num % 2 == 0) {
-        return true;
-    } else {
-        return false;
+    for ($i = 1; $i <= $num; $i++) {
+        if ($num % $i == 0) {
+            $divisors[] = $i;
+        }
     }
+    return $divisors;
 }
-$arr = [10, 5, 22, 8, 11, 34];
-foreach ($arr as $elem) {
-    if (isEven($elem)) {
-        $newArr[] = $elem;
-    }
+function getCommonDivisors($a, $b)
+{
+    $divisorsA = getDivisors($a);
+    $divisorsB = getDivisors($b);
+    return array_intersect($divisorsA, $divisorsB);
 }
-var_dump($newArr);
