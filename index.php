@@ -1,15 +1,16 @@
 <?php
-function getDigitsSum($num)
+function isEven($num)
 {
-    $digits = str_split($num);
-    $sumDigits = array_sum($digits);
-    return $sumDigits;
-
-}
-$year = [];
-for ($i = 1; $i <= 2021; $i++) {
-    if (getDigitsSum($i) == 13) {
-        $year[] = $i;
+    if ($num % 2 == 0) {
+        return true;
+    } else {
+        return false;
     }
 }
-var_dump($year);
+$arr = [10, 5, 22, 8, 11, 34];
+foreach ($arr as $elem) {
+    if (isEven($elem)) {
+        $newArr[] = $elem;
+    }
+}
+var_dump($newArr);
