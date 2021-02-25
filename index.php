@@ -1,10 +1,9 @@
 <?php
-$arr = [];
-$count = 1;
-for ($i = 0; $i < 3; $i++) {
-    for ($j = 0; $j < 3; $j++) {
-        $arr[$i][$j] = $count;
-        $count++;
+function isNumberInRange($num)
+{
+    if ($num > 0 && $num < 10) {
+        return true;
+    } else {
+        return false;
     }
-    var_dump($arr);
 }
