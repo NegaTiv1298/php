@@ -1,17 +1,8 @@
 <?php
-$arr = [1, 2, 3, -1, -2, -3, 5, 7];
-function isNumberInRange($num)
+function getDigitsSum($num)
 {
-    if ($num > 0 && $num < 10) {
-        return true;
-    } else {
-        return false;
-    }
+    $digits = str_split($num);
+    $sumDigits = array_sum($digits);
+    return $sumDigits;
+
 }
-$newArr = [];
-foreach ($arr as $elem) {
-    if (isNumberInRange($elem)) {
-        $newArr[] = $elem;
-    }
-}
-var_dump($newArr);
