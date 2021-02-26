@@ -1,15 +1,15 @@
 <?php
-function rusTranslit($string)
+function NumApple($num, $str1, $str2, $str3)
 {
-    $converter = ['а' => 'a', 'б' => 'b', 'в' => 'v', 'г' => 'g', 'д' => 'd',
-        'е' => 'e', 'ё' => 'yo', 'ж' => 'zh', 'з' => 'z', 'и' => 'i',
-        'й' => 'y', 'к' => 'k', 'л' => 'l', 'м' => 'm', 'н' => 'n',
-        'о' => 'o', 'п' => 'p', 'р' => 'r', 'с' => 's', 'т' => 't',
-        'у' => 'u', 'ф' => 'f', 'х' => 'kh', 'ц' => 'ts', 'ч' => 'ch',
-        'ш' => 'sh', 'щ' => 'shch', 'ъ' => '-', 'ы' => 'y', 'ь' => '`',
-        'э' => 'e', 'ю' => 'yu', 'я' => 'ya'];
-    return strtr($string, $converter);
+    if ($num == 1) {
+        return $num. ' '. $str1;
+    }
+    if ($num >= 2 && $num <= 4) {
+        return $num. ' '. $str2;
+    }
+    if ($num >= 5) {
+        return $num. ' '. $str3;
+    }
+    return false;
 }
-$str = 'привет';
-$result = rusTranslit($str);
-echo $result;
+echo NumApple (10, 'Яблоко', 'Яблока', 'Яблок');
