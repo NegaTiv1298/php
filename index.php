@@ -1,16 +1,15 @@
 <?php
-function getDivisors($num)
+function rusTranslit($string)
 {
-    for ($i = 1; $i <= $num; $i++) {
-        if ($num % $i == 0) {
-            $divisors[] = $i;
-        }
-    }
-    return $divisors;
+    $converter = ['а' => 'a', 'б' => 'b', 'в' => 'v', 'г' => 'g', 'д' => 'd',
+        'е' => 'e', 'ё' => 'yo', 'ж' => 'zh', 'з' => 'z', 'и' => 'i',
+        'й' => 'y', 'к' => 'k', 'л' => 'l', 'м' => 'm', 'н' => 'n',
+        'о' => 'o', 'п' => 'p', 'р' => 'r', 'с' => 's', 'т' => 't',
+        'у' => 'u', 'ф' => 'f', 'х' => 'kh', 'ц' => 'ts', 'ч' => 'ch',
+        'ш' => 'sh', 'щ' => 'shch', 'ъ' => '-', 'ы' => 'y', 'ь' => '`',
+        'э' => 'e', 'ю' => 'yu', 'я' => 'ya'];
+    return strtr($string, $converter);
 }
-function getCommonDivisors($a, $b)
-{
-    $divisorsA = getDivisors($a);
-    $divisorsB = getDivisors($b);
-    return array_intersect($divisorsA, $divisorsB);
-}
+$str = 'привет';
+$result = rusTranslit($str);
+echo $result;
