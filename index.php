@@ -1,12 +1,31 @@
 <?php
-function hBilet($num)
+function getDivisors($num)
 {
-    $arr = str_split($num, 1);
-    return $arr[0] + $arr[1] + $arr[2] == $arr[3] + $arr[4] + $arr[5];
+    $arr = [];
+    for ($i = 1; $i <= $num; $i++) {
+        if ($num % $i == 0) {
+            $arr[] = $num;
+        }
+    }
+    return $arr;
 }
-$num = '222222';
-if (hBilet($num)) {
-    echo 'Поздравляем, вы выиграли счастливый билет';
-} else {
-    echo 'Повезет в следуюющий раз';
+function ArraySum($arr)
+{
+    $sum = 0;
+    foreach ($arr as $elem) {
+        $sum += $elem;
+    }
+    return $sum;
+} // От сюда я не зміг сам зробити.
+$friend = [];
+for ($i = 1; $i < 1000; $i++) {
+    $sum1 = ArraySum(getDivisors($i));
+    if ($sum1 > 1) {
+        for ($j = $i + 1; $j <= 1000; $j++) {
+            if ($sum1 == ArraySum(getDivisors($j))) {
+                $friend[$i][] = $j;
+            }
+        }
+    }
 }
+var_dump($friend);
