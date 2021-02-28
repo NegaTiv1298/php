@@ -1,10 +1,12 @@
 <?php
-function recurs($arr)
+
+function recurs($num)
 {
-    echo array_pop($arr). '<br>';
-    if (!empty($arr)) {
-        recurs($arr);
+    $result = array_sum(str_split($num));
+    if ($result > 9) {
+        $result = recurs($result);
     }
+    return $result;
 }
-$arr = range(1, 10);
-recurs ($arr);
+$arr = '34';
+echo recurs($arr);
