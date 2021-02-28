@@ -1,5 +1,10 @@
 <?php
-function cut($str, $num = 10)
+function recurs($arr)
 {
-    return substr($str, 0 , $num);
+    echo array_pop($arr). '<br>';
+    if (!empty($arr)) {
+        recurs($arr);
+    }
 }
+$arr = range(1, 10);
+recurs ($arr);
