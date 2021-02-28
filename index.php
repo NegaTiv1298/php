@@ -1,15 +1,12 @@
 <?php
-function NumApple($num, $str1, $str2, $str3)
+function hBilet($num)
 {
-    if ($num == 1) {
-        return $num. ' '. $str1;
-    }
-    if ($num >= 2 && $num <= 4) {
-        return $num. ' '. $str2;
-    }
-    if ($num >= 5) {
-        return $num. ' '. $str3;
-    }
-    return false;
+    $arr = str_split($num, 1);
+    return $arr[0] + $arr[1] + $arr[2] == $arr[3] + $arr[4] + $arr[5];
 }
-echo NumApple (10, 'Яблоко', 'Яблока', 'Яблок');
+$num = '222222';
+if (hBilet($num)) {
+    echo 'Поздравляем, вы выиграли счастливый билет';
+} else {
+    echo 'Повезет в следуюющий раз';
+}
