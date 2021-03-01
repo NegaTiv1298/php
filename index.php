@@ -1,8 +1,10 @@
 <form action="" method="get">
     <p><b>Отметьте диапазон вашего возраста.</b></p>
-    <p>Менее 20 лет<input type="radio" name="rad1"></p>
-    <p>20-25<input type="radio" name="rad2"></p>
-    <p>26-30<input type="radio" name="rad3"></p>
-    <p>Более 30<input type="radio" name="rad4"></p>
+    <select>
+        <option>Менее 20 лет</option>
+        <option>20-25</option>
+        <option>26-30</option>
+        <option>Более 30</option>
+    </select> <br> <br>
     <input type="submit" name="sumbit">
 </form>
