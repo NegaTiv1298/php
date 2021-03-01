@@ -1,9 +1,7 @@
 <?php
-function input($type, $name, $value)
+function input($name)
 {
-    if (isset($_REQUEST[$name])) {
-        $value = $_REQUEST[$name];
-    }
-    return '<input type = "text" name = "'.$name.'" value = "'.$value.' ">';
+    return '<input type="hidden" name="'.$name.'" value="0">
+    <input type="checkbox" name="'.$name.'" value="1">';
 }
-echo input('text', 'input', '1');
+echo input('checkbox ');
