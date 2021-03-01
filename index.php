@@ -1,12 +1,13 @@
+<form>
+    <input type="text" name="name" placeholder="Введите имя">
+    <input type="checkbox" name="check"> <br> <br>
+    <input type="submit" name="sumbit">
+</form>
 <?php
-
-function recurs($num)
-{
-    $result = array_sum(str_split($num));
-    if ($result > 9) {
-        $result = recurs($result);
-    }
-    return $result;
+$name = $_REQUEST['name'];
+if (isset($_REQUEST ['name']) && isset($_REQUEST ['check']) == 1) {
+    echo 'Привет '. $name;
 }
-$arr = '34';
-echo recurs($arr);
+if (isset($_REQUEST ['check']) == 0) {
+    echo 'Прощайте '. $name;
+}
