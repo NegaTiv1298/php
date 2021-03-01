@@ -1,13 +1,8 @@
 <form action="" method="get">
-    <p><b>Знаете ли вы язык 'PHP'?</b></p>
-    <p>Да<input type="radio" name="rad1" value="1"></p>
-    <p>Нет<input type="radio" name="rad2" value="0"></p>
+    <p><b>Отметьте диапазон вашего возраста.</b></p>
+    <p>Менее 20 лет<input type="radio" name="rad1"></p>
+    <p>20-25<input type="radio" name="rad2"></p>
+    <p>26-30<input type="radio" name="rad3"></p>
+    <p>Более 30<input type="radio" name="rad4"></p>
     <input type="submit" name="sumbit">
 </form>
-<?php
-if (isset($_REQUEST ['rad1'])) {
-    echo 'Вы знаете PHP';
-}
-if (isset($_REQUEST ['rad2'])) {
-    echo 'Вы не знаете PHP';
-}
