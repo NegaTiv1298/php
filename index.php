@@ -1,11 +1,13 @@
 <?php
-$arr = range(1, 100);
+$arr = range(1, 15);
 foreach ($arr as $elem) {
-    $result += $elem;
-}
-echo $result;
-//////////////////////////////////////////////////////////////////
-for ($i = 1; $i <= 100; $i++) {
-    $sum += $i;
+    $kv = $elem * $elem;
+    $sum += $kv;
 }
 echo $sum;
+///////////////////////////////////////////////////
+
+for ($i = 1; $i <= 15; $i++) {
+    $result += $i * $i;
+}
+echo $result;
