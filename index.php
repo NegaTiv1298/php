@@ -1,10 +1,8 @@
 <?php
-$arr = [
-    0=>['name'=>'Коля', 'salary'=>300],
-    1=>['name'=>'Вася', 'salary'=>400],
-    2=>['name'=>'Петя', 'salary'=>500],
-];
-
-foreach ($arr as $elem) {
-    echo $elem['name']. '-'. $elem['salary']. '<br>';
+$arr = [];
+for ($i = 1; $i <= 10; $i++) {
+    for ($j = 1; $j <= 10; $j++) {
+        $arr[$i][] = mt_rand(1, 10);
+    }
 }
+var_dump($arr);
