@@ -1,6 +1,9 @@
 <?php
 $result = [];
-for ($i = 10; $i >= 1; $i--) {
+for ($i = 1; $i <= 10; $i++) {
     $result[] = $i;
+    shuffle($result);
 }
 var_dump($result);
+?>
+
