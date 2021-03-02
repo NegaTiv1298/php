@@ -1,7 +1,6 @@
 <?php
-$str = '';
-for ($i = 1; $i <= 6; $i++) {
-    $str .= rand(1, 9);
+$arr = range(1, 10);
+foreach ($arr as $elem) {
+    $sum += $elem;
 }
-echo $str;
-
+echo $sum;
