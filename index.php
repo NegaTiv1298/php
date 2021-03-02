@@ -1,9 +1,7 @@
 <?php
-$result = [];
-for ($i = 1; $i <= 10; $i++) {
-    $result[] = $i;
-    shuffle($result);
+$str = '';
+for ($i = 1; $i <= 6; $i++) {
+    $str .= rand(1, 9);
 }
-var_dump($result);
-?>
+echo $str;
 
