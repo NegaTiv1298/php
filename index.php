@@ -1,7 +1,8 @@
 <?php
-$arr = range(1, 10);
-$sum = 0;
+$arr = [1, 3, -2, -5, 9, 11, 7];
 foreach ($arr as $elem) {
-    $sum += $elem * $elem;
+    if ($elem > 0 && $elem < 10) {
+        $result += $elem;
+    }
 }
-echo floor(sqrt($sum));
+echo $result;
