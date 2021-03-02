@@ -1,6 +1,6 @@
 <?php
 $result = [];
-for ($i = 1; $i <= 10; $i++) {
-    $result[] .= $i;
+for ($i = 10; $i >= 1; $i--) {
+    $result[] = $i;
 }
 var_dump($result);
