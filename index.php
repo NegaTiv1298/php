@@ -1,5 +1,9 @@
 <?php
-for ($i = 1; $i <= 15; $i++) {
-    $result += sqrt($i);
+$arr = range(1, 100);
+foreach ($arr as $elem) {
+    if ($elem % 7 == 0) {
+        $result += $elem;
+    }
 }
-echo round($result, 2);
+echo $result;
+
