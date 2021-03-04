@@ -1,12 +1,12 @@
 <?php
-$str = 'abcde';
+$str = 'var_text_hello';
+$arr = explode('_', $str);
 $str2 = '';
-$arr = str_split($str);
 foreach ($arr as $elem) {
-    if (ord($elem) >= 97 && ord($elem) <= 122) {
-        $str2 .= strtoupper($elem);
+    if ($elem == $arr[0]) {
+        $str2 .= $elem;
     } else {
-        $str2 .= strtolower($elem);
+        $str2 .= ucfirst($elem);
     }
 }
 echo $str2;
