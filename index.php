@@ -1,7 +1,12 @@
 <?php
-function strLlen($str)
-{
-    return count(str_split($str, 1));
+$str = 'abcde';
+$str2 = '';
+$arr = str_split($str);
+foreach ($arr as $elem) {
+    if (ord($elem) >= 97 && ord($elem) <= 122) {
+        $str2 .= strtoupper($elem);
+    } else {
+        $str2 .= strtolower($elem);
+    }
 }
-$str = '1, 2, 3, 4, 5';
-echo strLlen($str);
+echo $str2;
