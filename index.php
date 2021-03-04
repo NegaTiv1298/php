@@ -1,13 +1,7 @@
 <?php
-function streev1($str)
+function strLlen($str)
 {
-    $arr = str_split($str, 1);
-    $arr = array_reverse($arr);
-    $str = implode($arr);
-    return $str;
+    return count(str_split($str, 1));
 }
-
-function streev2($str)
-{
-
-}
+$str = '1, 2, 3, 4, 5';
+echo strLlen($str);
