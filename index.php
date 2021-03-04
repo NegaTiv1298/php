@@ -1,8 +1,13 @@
 <?php
-$arr = [];
-for ($i = 1; $i <= 10; $i++) {
-    for ($j = 1; $j <= 10; $j++) {
-        $arr[$i][] = mt_rand(1, 10);
-    }
+function streev1($str)
+{
+    $arr = str_split($str, 1);
+    $arr = array_reverse($arr);
+    $str = implode($arr);
+    return $str;
 }
-var_dump($arr);
+
+function streev2($str)
+{
+
+}
