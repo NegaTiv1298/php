@@ -1,12 +1,5 @@
 <?php
-$str = 'var_text_hello';
-$arr = explode('_', $str);
-$str2 = '';
-foreach ($arr as $elem) {
-    if ($elem == $arr[0]) {
-        $str2 .= $elem;
-    } else {
-        $str2 .= ucfirst($elem);
-    }
+for ($i = 1; $i <= 9; $i++) {
+    $str = str_repeat($i, $i);
+    echo $str. '<br>';
 }
-echo $str2;
