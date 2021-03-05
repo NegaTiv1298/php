@@ -1,6 +1,9 @@
 <?php
-$str = 'xxxxxxxx';
-$len = strlen($str);
-for ($i = $len; $i > 0; $i--) {
-    echo substr($str, 0, $i). '<br>';
+$arr = [2, 1, 3, 5];
+$arr2 = [];
+foreach ($arr as $elem) {
+    for ($i = 1; $i <= $elem; $i++) {
+        $arr2[] = $elem;
+    }
 }
+var_dump($arr2);
