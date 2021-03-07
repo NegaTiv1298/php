@@ -5,11 +5,9 @@
 <?php
 if (isset($_REQUEST['text'])) {
     $year = trim($_REQUEST['text']);
-    if (strlen($year) == 4) {
-        if (date('L', mktime(0,0,0,1,1,$year))) {
-            echo 'Высокосный';
-        } else {
-            echo 'Не высокосный';
-        }
-    }
+    $arr = explode('.', $year);
+    $mtime = mktime(0,0, 0, $arr[1], $arr[0], $arr[2]);
+    $week = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
+    $day = date('w', $mtime);
+    echo $week[$day];
 }
