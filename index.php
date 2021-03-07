@@ -1,4 +1,14 @@
 <?php
-$str = '12345678';
-$result = array_reverse(str_split(strrev($str), 2));
-echo implode('', $result);
+function Arrunique($arr)
+{
+    $result = [];
+    foreach ($arr as $elem) {
+        if (in_array($elem, $result) == false) {
+            $result[] = $elem;
+        }
+    }
+    return $result;
+}
+
+$arr = [1, 1, 1, 2, 3, 4, 4, 5];
+var_dump(Arrunique($arr));
