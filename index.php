@@ -1,14 +1,10 @@
 <?php
-$arr = [12];
-$flag = false;
+$arr = ['http://google.com', 'yandex.ru', 'http://code.mu', 'youtube'];
+$result = [];
 foreach ($arr as $elem) {
-    if ($elem % 1 == 0 && $elem % $elem == 0) {
-        $flag = true;
-        break;
+    $str = implode(',', $arr);
+    if (strpos($elem, 'http://') === 0) {
+        $result[] = $elem;
     }
 }
-if ($flag === true) {
-    echo 'Это число - простое';
-} else {
-    echo 'Это число - не простое';
-}
+var_dump($result);
