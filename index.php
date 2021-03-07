@@ -1,14 +1,14 @@
 <?php
-function Arrunique($arr)
-{
-    $result = [];
-    foreach ($arr as $elem) {
-        if (in_array($elem, $result) == false) {
-            $result[] = $elem;
-        }
+$arr = [12];
+$flag = false;
+foreach ($arr as $elem) {
+    if ($elem % 1 == 0 && $elem % $elem == 0) {
+        $flag = true;
+        break;
     }
-    return $result;
 }
-
-$arr = [1, 1, 1, 2, 3, 4, 4, 5];
-var_dump(Arrunique($arr));
+if ($flag === true) {
+    echo 'Это число - простое';
+} else {
+    echo 'Это число - не простое';
+}
