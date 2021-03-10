@@ -3,11 +3,14 @@
     <input type="submit">
 </form>
 <?php
+
 if (isset($_REQUEST['text'])) {
     $text = $_REQUEST['text'];
-    $strlen = strlen($text);
-    $count = count(explode(' ', $text));
-    $probel = $count - 1;
-    echo 'В тексте '. $count. ' слов '.$strlen. ' символов '. $probel. ' пробелов';
+    $strLen = mb_strlen($text);
+    $arr = array_count_values(str_split($text));
+    foreach ($arr as $key => $item) {
+        $result = 100 / $strLen * $item;
+        echo '"'. $key. '"'. ' - '. round($result, 2). '%'. '<br>';
+    }
 }
 
