@@ -1,18 +1,22 @@
 <form action="" method="get">
     <input type="text" name="text"> <br>
+    <input type="text" name="text2"> <br>
     <input type="submit">
 </form>
 <?php
-if (isset($_REQUEST['text'])) {
-    $a = $_REQUEST['text'];
-    $arr = [];
-    for ($i = 2; $i <= $a; $i++) {
-        if (($a % $i) == 0) {
-            $arr[] = $i;
-            $a /= $i;
-            $i--;
-            if ($a < 2) break;
+function Delitel($num)
+{
+    for ($i = 1; $i <= $num; $i++) {
+        if ($num % $i == 0) {
+            $del[] = $i;
         }
     }
-    echo implode('*', $arr);
+    return $del;
+}
+if (isset($_REQUEST['text']) && $_REQUEST['text2']) {
+    $a = $_REQUEST['text'];
+    $b = $_REQUEST['text2'];
+    $delA = Delitel($a);
+    $delB = Delitel($b);
+    echo implode(',', array_intersect($delA, $delB));
 }
