@@ -3,13 +3,11 @@
     <input type="submit">
 </form>
 <?php
-function Factorial($num)
-{
-    if ($num < 1) {
-        return 1;
-    } else return ($num * Factorial($num - 1));
-}
 if (isset($_REQUEST['text'])) {
-    $str = $_REQUEST['text'];
-    echo Factorial($str);
+    $a = $_REQUEST['text'];
+    for ($i = 1; $i <= $a; $i++) {
+        if ($a % $i == 0) {
+            echo $i. '<br>';
+        }
+    }
 }
