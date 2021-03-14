@@ -1,34 +1,30 @@
+<?php
+$month = [1 => 'январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь'];
+?>
 <form action="" method="get">
-    <input type="text" name="text"> <br>
-    <input type="text" name="text2"> <br>
+    <select name="day">
+        <?php for ($i = 1; $i <= 31; $i++): ?>
+            <option><?=$i;?></option>
+        <?php endfor;?>
+    </select>
+    <select name="month">
+        <?php foreach ($month as $elem): ?>
+            <option><?=$elem;?></option>
+        <?php endforeach;?>
+    </select>
+    <select name="year">
+        <?php for ($i = 1990; $i <= 2025; $i++): ?>
+            <option><?=$i;?></option>
+        <?php endfor;?>
+    </select>
     <input type="submit">
 </form>
 <?php
-function delitel($num)
-{
-    $del = [];
-    for ($i = 1; $i <= $num; $i++) {
-        if ($num % $i == 0) {
-            $del[] = $i;
-        }
-    }
-    return $del;
-}
-if (isset($_REQUEST['text']) && $_REQUEST['text2']) {
-    $a = $_REQUEST['text'];
-    $b = $_REQUEST['text2'];
-    $max = 0;
-    if ($a > $b) {
-        $max = $a;
-    } else {
-        $max = $b;
-    }
-    $flag = true;
-    while ($flag) {
-        $max++;
-        if ($max % $a == 0 and $max % $b == 0) {
-            $flag = false;
-            echo $max;
-        }
-    }
+$week = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'];
+if (isset($_REQUEST)) {
+    $day = $_REQUEST['day'];
+    $mon = array_search($_REQUEST['month'], $month);
+    $year = $_REQUEST['year'];
+    $dayOfWeek = $week[date('w', mktime(0,0,0,$mon, $day, $year))];
+    echo $dayOfWeek;
 }
