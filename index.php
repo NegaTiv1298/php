@@ -1,5 +1,5 @@
 <?php
-$href = 'index.html';
-$text = 'ссылка';
-echo '<a href="' . $href . '">' . $text . '</a>'. '<br>';
-echo "<a href=\" $href \"> $text </a>";
+$arr = [1, 2, 3, 4, 5];
+foreach ($arr as $elem) {
+    echo "<p>$elem</p>";
+}
