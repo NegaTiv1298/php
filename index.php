@@ -1,2 +1,2 @@
 <?php
-echo pow($_GET['get'], 2);
+echo $_GET['get1'] + $_GET['get2'];
