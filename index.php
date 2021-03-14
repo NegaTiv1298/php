@@ -1,13 +1,21 @@
 <?php
 $arr = [
-    ['href'=>'1.html', 'text'=>'ссылка 1'],
-    ['href'=>'2.html', 'text'=>'ссылка 2'],
-    ['href'=>'3.html', 'text'=>'ссылка 3'],
+    ['name'=>'Коля', 'age'=>30, 'salary'=>500],
+    ['name'=>'Вася', 'age'=>31, 'salary'=>600],
+    ['name'=>'Петя', 'age'=>32, 'salary'=>700],
 ];
+echo '<table>'. '<tr>';
+
 foreach ($arr as $elem) {
-    $href = $elem['href'];
-    $text = $elem['text'];
-    echo "<ul>
-<li><a href=\"$href\">$text</a></li>
-</ul>";
+    $name = $elem['name'];
+    $age = $elem['age'];
+    $salary = $elem['salary'];
+    echo
+    "<tr>         
+           <td>$name</td> 
+           <td>$age</td> 
+           <td>$salary</td>           
+    </tr>";
 }
+echo '</tr>'.'</table>';
+?>
