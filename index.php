@@ -1,4 +1,4 @@
 <?php
-$name = 'Иван';
-echo 'Привет, ' . $name . '!';
-echo "Привет, $name!";
+$arr = ['name'=>'Иван', 'age'=>30];
+echo 'Привет, '. $arr['name']. '! '. 'Тебе '. $arr['age']. ' лет.'.'<br>';
+echo "Привет $arr[name]! Тебе $arr[age] лет.";
