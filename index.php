@@ -17,8 +17,18 @@ function delitel($num)
 if (isset($_REQUEST['text']) && $_REQUEST['text2']) {
     $a = $_REQUEST['text'];
     $b = $_REQUEST['text2'];
-    $delA = delitel($a);
-    $delB = delitel($b);
-    $del = array_intersect($delA, $delB);
-    echo max($del);
+    $max = 0;
+    if ($a > $b) {
+        $max = $a;
+    } else {
+        $max = $b;
+    }
+    $flag = true;
+    while ($flag) {
+        $max++;
+        if ($max % $a == 0 and $max % $b == 0) {
+            $flag = false;
+            echo $max;
+        }
+    }
 }
