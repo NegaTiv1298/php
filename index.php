@@ -1,7 +1,11 @@
 <?php
-$arr = [1, 2, 3, 4, 5];
+$arr = [
+    ['href'=>'1.html', 'text'=>'ссылка 1'],
+    ['href'=>'2.html', 'text'=>'ссылка 2'],
+    ['href'=>'3.html', 'text'=>'ссылка 3'],
+];
 foreach ($arr as $elem) {
-    echo '<ul>';
-    echo "<li>$elem</li>";
-    echo '</ul>';
+    $href = $elem['href'];
+    $text = $elem['text'];
+    echo "<p><a href=\"$href\">$text</a></p>";
 }
