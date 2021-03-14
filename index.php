@@ -7,5 +7,7 @@ $arr = [
 foreach ($arr as $elem) {
     $href = $elem['href'];
     $text = $elem['text'];
-    echo "<p><a href=\"$href\">$text</a></p>";
+    echo "<ul>
+<li><a href=\"$href\">$text</a></li>
+</ul>";
 }
