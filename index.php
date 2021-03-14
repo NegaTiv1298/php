@@ -1,2 +1,8 @@
 <?php
-echo $_GET['get1'] + $_GET['get2'];
+$get = $_GET['get'];
+if ($get == 1) {
+    echo 'Привет!!!';
+}
+if ($get == 2) {
+    echo 'Пока';
+}
