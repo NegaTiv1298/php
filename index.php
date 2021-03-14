@@ -4,8 +4,9 @@
     <input type="submit">
 </form>
 <?php
-function Delitel($num)
+function delitel($num)
 {
+    $del = [];
     for ($i = 1; $i <= $num; $i++) {
         if ($num % $i == 0) {
             $del[] = $i;
@@ -16,7 +17,8 @@ function Delitel($num)
 if (isset($_REQUEST['text']) && $_REQUEST['text2']) {
     $a = $_REQUEST['text'];
     $b = $_REQUEST['text2'];
-    $delA = Delitel($a);
-    $delB = Delitel($b);
-    echo implode(',', array_intersect($delA, $delB));
+    $delA = delitel($a);
+    $delB = delitel($b);
+    $del = array_intersect($delA, $delB);
+    echo max($del);
 }
