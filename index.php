@@ -1,4 +1,5 @@
 <?php
-$text = '!!!';
-echo '<p>' . $text . '</p>';
-echo "<p>$text</p>";
+$href = 'index.html';
+$text = 'ссылка';
+echo '<a href="' . $href . '">' . $text . '</a>'. '<br>';
+echo "<a href=\" $href \"> $text </a>";
