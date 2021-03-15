@@ -1,3 +1,3 @@
 <?php
-$str = 'aba aca aea abba adca abea';
-echo preg_replace('#ab.a#', '!', $str);
+$str = 'aa aba abba abbba abca abea';
+echo preg_replace('#ab+a#', '!', $str);
