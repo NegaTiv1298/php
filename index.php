@@ -1,3 +1,3 @@
 <?php
-$str = 'a.a aba aea';
-echo preg_replace('#(a\.a)+#', '!', $str);
+$str = '2+3 223 2223';
+echo preg_replace('#(2\+3)+#', '!', $str);
