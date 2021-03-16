@@ -1,3 +1,3 @@
 <?php
-$str = '*+ *q+ *qq+ *qqq+ *qqq qqq+';
-echo preg_replace('#(\*q*\+)+#', '!', $str);
+$str = 'aba accca azzza wwwwa';
+echo preg_replace('#a.+?a#', '!', $str);
