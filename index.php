@@ -1,3 +1,3 @@
 <?php
-$str = 'avb a1b a2b a3b a4b a5b abb acb';
-echo preg_replace('#a\Db#', '!', $str);
+$str = 'ave a#b a2b a$b a4b a5b a-b acb';
+echo preg_replace('#a\Wb#', '!', $str);
