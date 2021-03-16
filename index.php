@@ -1,3 +1,3 @@
 <?php
-$str = 'ave a#b a2b a$b a4b a5b a-b acb';
-echo preg_replace('#a\Wb#', '!', $str);
+$str = 'ave a#a a2a a$a a4a a5a a-a aca';
+echo preg_replace('#\s#', '!', $str);
