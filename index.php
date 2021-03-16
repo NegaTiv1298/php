@@ -1,3 +1,3 @@
 <?php
-$str = 'aba aea aca aza axa a.a a+a a*a';
-echo preg_replace('#a[a-fA-z]a#', '!', $str);
+$str = 'aba aea aca aza axa a-a a#a';
+echo preg_replace('#a[^ex]a#', '!', $str);
