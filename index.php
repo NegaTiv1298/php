@@ -1,3 +1,3 @@
 <?php
-$str = 'aa a1a a22a a333a a4444a a55555a aba aca';
-echo preg_replace('#a\d*a#', '!', $str);
+$str = 'avb a1b a2b a3b a4b a5b abb acb';
+echo preg_replace('#a\Db#', '!', $str);
