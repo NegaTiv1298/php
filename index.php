@@ -1,3 +1,3 @@
 <?php
-$str = 'a1a a2a a3a a4a a5a aba aca';
-echo preg_replace('#a\da#', '!', $str);
+$str = 'a1a a22a a333a a4444a a55555a aba aca';
+echo preg_replace('#a\d+a#', '!', $str);
