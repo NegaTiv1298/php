@@ -1,3 +1,3 @@
 <?php
-$str = 'aba accca azzza wwwwa';
-echo preg_replace('#a.+?a#', '!', $str);
+$str = 'aa aba abba abbba abbbba abbbbba';
+echo preg_replace('#ab{2,4}a#', '!', $str);
