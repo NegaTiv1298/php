@@ -1,3 +1,3 @@
 <?php
-$str = 'aba aea aca aza axa a-a a#a';
-echo preg_replace('#a[^ex]a#', '!', $str);
+$str = 'wйw wяw wёw wqw';
+echo preg_replace('#w[а-яА-ЯёЁ]w#u', '!', $str);
