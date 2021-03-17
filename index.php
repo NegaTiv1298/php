@@ -1,3 +1,3 @@
 <?php
-$str = 'site.php';
-echo preg_match('#html|php|css$#', $str);
+$str = 'site.jpg';
+echo preg_match('#jpg|jpeg$#', $str);
