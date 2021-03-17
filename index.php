@@ -1,3 +1,3 @@
 <?php
-$str = 'bbb /aaa\ bbb /ccc\\';
-echo preg_replace('#/[a-z]+\\\\#', '!', $str);
+$str = 'bbb <b> hello </b>, <b> world </b> eee';
+echo preg_replace('#<b>(.+?)</b>#', '!', $str);
