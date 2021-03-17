@@ -1,3 +1,3 @@
 <?php
-$str = 'aae xxz 33a';
-echo preg_replace('#(\w)\1#', '!', $str);
+$str = 'aaa bcd xxx efg';
+echo preg_replace('#(\w)\1+#', '!', $str);
