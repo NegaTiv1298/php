@@ -1,3 +1,3 @@
 <?php
-$str = 'aeeea aeea aea axa axxa axxxa';
-echo preg_replace('#(a(ee|x+)a)#', '!', $str);
+$str = 'xbx aca aea abba adca abea';
+echo preg_replace('#\b#', '!', $str);
