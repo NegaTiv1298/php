@@ -1,3 +1,3 @@
 <?php
-$str = 'bbb <b> hello </b>, <b> world </b> eee';
-echo preg_replace('#<b>(.+?)</b>#', '!', $str);
+$str = 'aaa@bbb eee7@kkk';
+echo preg_replace('#([a-z\d]+)@([a-z\d]+)#', '$2@$1', $str);
