@@ -1,3 +1,3 @@
 <?php
-$str = 'site.jpg';
-echo preg_match('#jpg|jpeg$#', $str);
+$str = '1234321423';
+echo preg_match('#^\d{1,12}$#', $str);
