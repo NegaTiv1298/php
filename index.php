@@ -1,3 +1,3 @@
 <?php
-$str = 'a1b2c3';
-echo preg_replace('#(a1b2c3)#', '$0$0', $str);
+$str = 'aae xxz 33a';
+echo preg_replace('#(\w)\1#', '!', $str);
