@@ -1,3 +1,3 @@
 <?php
-$str = 'a\a abc';
-echo preg_replace('#a\\\\a#', '!', $str);
+$str = 'bbb /aaa\ bbb /ccc\\';
+echo preg_replace('#/[a-z]+\\\\#', '!', $str);
