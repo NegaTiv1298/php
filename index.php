@@ -1,3 +1,3 @@
 <?php
-$str = '31-12-2014';
-echo preg_replace('#([\d]{2,})-([\d]{2,})-([\d]{2,})#', '$3.$2.$1', $str);
+$str = 'http://site.ru';
+echo preg_replace('#http://([a-z]+\.[a-z]{2,3})#', '<a href="$0">$1</a>', $str);
