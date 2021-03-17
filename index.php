@@ -1,3 +1,3 @@
 <?php
-$str = 'xbx aca aea abba adca abea';
-echo preg_replace('#\b#', '!', $str);
+$str = 'a\a abc';
+echo preg_replace('#a\\\\a#', '!', $str);
