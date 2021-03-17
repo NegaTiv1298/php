@@ -1,3 +1,3 @@
 <?php
-$str = 'ааа ббб ёёё ззз ййй ААА БББ ЁЁЁ ЗЗЗ ЙЙЙ';
-echo preg_replace('#[а-яА-ЯёЁ]+#', '!', $str);
+$str = 'aaa aaa aaa';
+echo preg_replace('#^aaa#', '!', $str);
