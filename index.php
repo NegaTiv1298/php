@@ -1,3 +1,3 @@
 <?php
-$str = 'aaab aaaf aaac';
-echo preg_replace('#aaa(?!b)#i', '!', $str);
+$str = 'aa b cc';
+echo preg_replace('#([a-z])(?=\1)#i', '!', $str);
