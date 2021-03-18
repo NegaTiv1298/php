@@ -1,4 +1,4 @@
 RewriteEngine On
 RewriteBase /
 
-RewriteRule \.php|\.html index.php
+RewriteRule (.+)\.html $1.php
