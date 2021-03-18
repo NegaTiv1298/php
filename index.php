@@ -1,8 +1,7 @@
 <?php
-$str = '1 2 3 4';
+$str = "2aaa'3'bbb'4'";
 function kv($m)
 {
-    $result = pow($m[0], 2);
-    return $result;
+   return $m[1] * 2;
 }
-echo preg_replace_callback('#(\d+)#i', 'kv', $str);
+echo preg_replace_callback("#'(\d+)'#i", 'kv', $str);
