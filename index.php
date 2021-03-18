@@ -1,3 +1,3 @@
 <?php
-$str = 'baaa caaa baa';
-echo preg_replace('#(?<=b)aaa#i', '!', $str);
+$str = 'baaa caaa faaa';
+echo preg_replace('#(?<!b)aaa#i', '!', $str);
