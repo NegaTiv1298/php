@@ -1,5 +1,4 @@
 RewriteEngine On
 RewriteBase /
 
-RewriteRule ^dir1/ index1.php
-RewriteRule ^dir2/ index2.php
+RewriteRule \.html index.php
