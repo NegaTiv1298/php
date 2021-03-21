@@ -1,4 +1,5 @@
 RewriteEngine On
 RewriteBase /
 
-RewriteRule test(\d)\.php index.php
+RewriteCond %{REQUEST_URI} \.html$
+RewriteRule .+ index.php
