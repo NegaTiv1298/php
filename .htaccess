@@ -1,4 +1,4 @@
 RewriteEngine On
 RewriteBase /
 
-RewriteRule index.php/(.+) http://site.com/$1
+RewriteRule .+/dir/$ index.php
