@@ -1,3 +1,3 @@
 <?php
-file_put_contents('text.txt', '122223');
-echo file_get_contents('text.txt');
+file_put_contents('text1.txt', '122342223');
+echo file_get_contents('text1.txt');
