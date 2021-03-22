@@ -2,4 +2,4 @@ RewriteEngine On
 RewriteBase /
 
 RewriteCond %{REQUEST_URI} !^/index\.php
-RewriteRule (.+) index.php?get=$1
+RewriteRule (.+)/index.php index.php?get=$1
