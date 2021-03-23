@@ -1,4 +1,4 @@
 <?php
-$text = pow(file_get_contents('text.txt'), 2);
+$text = file_get_contents('text.txt') + 1;
 file_put_contents('text.txt', $text);
 echo $text;
