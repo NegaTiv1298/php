@@ -1,5 +1,3 @@
 <?php
-$text = file_get_contents('text.txt');
-$arr = explode("\r\n", $text);
-$sum = (array_sum($arr));
-file_put_contents('sum.txt', $sum);
+$arr = [1, 2, 3, 4, 5];
+file_put_contents('text.txt', implode("\r\n", $arr));
