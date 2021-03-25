@@ -1,5 +1,7 @@
 <?php
 $arr = array_diff(scandir('dir'), ['..', '.']);
 foreach ($arr as $elem) {
-    echo file_get_contents('dir/'. $elem);
+    echo $elem;
+    var_dump(is_file('dir/'. $elem));
+    var_dump(is_dir('dir/'. $elem));
 }
