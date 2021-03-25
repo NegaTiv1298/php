@@ -1,22 +1,15 @@
 <?php
-function getFiles($dir)
+function removeDir($dir)
 {
-    $arr = array_diff(scandir('dir'), ['..', '.']);
-    $result = [];
+    $arr = array_diff(scandir($dir), ['..', '.']);
     foreach ($arr as $elem) {
         $path = $dir . '/' . $elem;
         if (is_dir($path)) {
-            $result = array_merge($result, getFiles($path));
+            removeDir($path);
         } else {
-            $result[] = $path;
+            unlink($path);
         }
     }
-    return $result;
+    rmdir($dir);
 }
-$arr = getFiles('dir');
-foreach ($arr as $elem) {
-    if (is_file($elem)) {
-        $text = file_get_contents($elem);
-        file_put_contents($elem, $text. '!');
-    }
-}
+removeDir('dir');
