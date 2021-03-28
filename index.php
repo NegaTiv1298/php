@@ -1,3 +1,3 @@
 <?php
-setcookie("test", "123123", time() + 3600);
+setcookie("test", "123123", time());
 echo $_COOKIE['test'];
