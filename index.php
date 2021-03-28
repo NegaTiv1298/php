@@ -1,4 +1,3 @@
 <?php
 session_start();
-$_SESSION['test'] = 'Test';
-echo $_SESSION['test'];
+$_SESSION['123'] = 'Test123';
