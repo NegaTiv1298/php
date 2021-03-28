@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['counter'])) {
-    echo 'Вы не обновляли страницу';
+    $_SESSION['counter'] = 1;
 } else {
     $_SESSION['counter'] = $_SESSION['counter'] + 1;
 }
