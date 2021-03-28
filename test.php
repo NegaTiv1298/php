@@ -1,3 +1,8 @@
 <?php
 session_start();
-echo $_SESSION['123'];
+if (!isset($_SESSION['counter'])) {
+    echo 'Вы не обновляли страницу';
+} else {
+    $_SESSION['counter'] = $_SESSION['counter'] + 1;
+}
+echo 'Вы обновили страницу '. $_SESSION['counter']. ' раз!';
