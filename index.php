@@ -1,10 +1,11 @@
 <?php
 if (!empty($_REQUEST['birthday'])) {
     setcookie('birthday', $_REQUEST['birthday'], time() + 3600);
-        $dateR = $_REQUEST['birthday'];
-        $chekTime = strtotime($dateR) - time();
+        $dateR = explode('.', $_REQUEST['birthday']);
+        $mkTime = mktime(0, 0, 0, $dateR[1], $dateR[0], $dateR[2]);
+        $chekTime = $mkTime - time();
         if ($_COOKIE['birthday']) {
-            $birthday = floor($chekTime / (60*60*24));
+            $birthday = date('z', $chekTime);
             if ($birthday == 0) {
                 echo 'Поздравляем з днем рождения!!';
             } else {
@@ -14,6 +15,6 @@ if (!empty($_REQUEST['birthday'])) {
 }
 ?>
 <form action="" method="get">
-    <p><b>Введите дату своего рождения</b></p><input type="date" name="birthday">
+    <p><b>Введите дату своего рождения</b></p><input type="text" name="birthday">
     <input type="submit">
 </form>
