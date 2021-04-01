@@ -9,13 +9,12 @@ $link = mysqli_connect($host, $user, $password, $db_name);
 mysqli_query($link, "SET NAMES 'utf8'");
 
 //$query = "SELECT * FROM workers WHERE salary>=400 AND salary<=1000 OR age>=23 AND age<=27";
-$query = "INSERT INTO workers (name, age, salary)
-     VALUES ('Ярослав', 30, 1200), ('Петр', 31, 1000)";
+$query = "UPDATE workers SET salary=300 WHERE name='Петя'";
 
 $result = mysqli_query($link, $query) or die(mysqli_error($link));
 
 //$user = mysqli_fetch_assoc($result);
 //var_dump($user);
 
-for ($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
-var_dump($data);
+//for ($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
+//var_dump($data);
