@@ -8,7 +8,7 @@ $link = mysqli_connect($host, $user, $password, $db_name);
 
 mysqli_query($link, "SET NAMES 'utf8'");
 
-$query = "SELECT age, salary FROM workers WHERE name = 'Вася'";
+$query = "SELECT * FROM workers WHERE age>25 AND age<=28";
 
 $result = mysqli_query($link, $query) or die(mysqli_error($link));
 
