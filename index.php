@@ -8,14 +8,12 @@ $link = mysqli_connect($host, $user, $password, $db_name);
 
 mysqli_query($link, "SET NAMES 'utf8'");
 
-$query = "SELECT * FROM workers WHERE age>25 AND age<=28";
+$query = "SELECT * FROM workers WHERE name='Вася' OR name='Коля'";
 
 $result = mysqli_query($link, $query) or die(mysqli_error($link));
 
-/*$user = mysqli_fetch_assoc($result);
-var_dump($user);
 $user = mysqli_fetch_assoc($result);
 var_dump($user);
-*/
-for ($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
-var_dump($data);
+
+//for ($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
+//var_dump($data);
