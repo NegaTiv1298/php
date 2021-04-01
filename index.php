@@ -1,20 +1,21 @@
 <?php
-if (!empty($_REQUEST['birthday'])) {
-    setcookie('birthday', $_REQUEST['birthday'], time() + 3600);
-        $dateR = explode('.', $_REQUEST['birthday']);
-        $mkTime = mktime(0, 0, 0, $dateR[1], $dateR[0], $dateR[2]);
-        $chekTime = $mkTime - time();
-        if ($_COOKIE['birthday']) {
-            $birthday = date('z', $chekTime);
-            if ($birthday == 0) {
-                echo 'Поздравляем з днем рождения!!';
-            } else {
-                echo 'Сегодня ' . date('d.m.Y', time()) . '<br>' . 'До Вашего дня рождения осталось ' . $birthday . ' дней';
-            }
-        }
-}
-?>
-<form action="" method="get">
-    <p><b>Введите дату своего рождения</b></p><input type="text" name="birthday">
-    <input type="submit">
-</form>
+$host = 'php';
+$user = 'root';
+$password = '';
+$db_name = 'test';
+
+$link = mysqli_connect($host, $user, $password, $db_name);
+
+mysqli_query($link, "SET NAMES 'utf8'");
+
+$query = "SELECT * FROM workers WHERE age=23";
+
+$result = mysqli_query($link, $query) or die(mysqli_error($link));
+
+/*$user = mysqli_fetch_assoc($result);
+var_dump($user);
+$user = mysqli_fetch_assoc($result);
+var_dump($user);
+*/
+for ($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
+var_dump($data);
