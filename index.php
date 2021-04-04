@@ -8,7 +8,7 @@ $link = mysqli_connect($host, $user, $password, $db_name);
 
 mysqli_query($link, "SET NAMES 'utf8'");
 
-$query = "SELECT * FROM workers WHERE id>0 ORDER BY age LIMIT 2,5";
+$query = "SELECT COUNT(*) as count FROM workers WHERE salary=400";
 
 $result = mysqli_query($link, $query) or die(mysqli_error($link));
 
