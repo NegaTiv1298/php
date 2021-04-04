@@ -8,7 +8,7 @@ $link = mysqli_connect($host, $user, $password, $db_name);
 
 mysqli_query($link, "SET NAMES 'utf8'");
 
-$query = "SELECT * FROM pages WHERE athor LIKE '%ов'";
+$query = "SELECT * FROM pages WHERE article LIKE '%элемент%'";
 
 $result = mysqli_query($link, $query) or die(mysqli_error($link));
 
