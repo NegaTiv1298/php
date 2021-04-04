@@ -8,7 +8,7 @@ $link = mysqli_connect($host, $user, $password, $db_name);
 
 mysqli_query($link, "SET NAMES 'utf8'");
 
-$query = "SELECT * FROM workers WHERE id>0 LIMIT 6";
+$query = "SELECT * FROM workers WHERE id>0 LIMIT 2,3";
 
 $result = mysqli_query($link, $query) or die(mysqli_error($link));
 
