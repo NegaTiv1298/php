@@ -8,7 +8,7 @@ $link = mysqli_connect($host, $user, $password, $db_name);
 
 mysqli_query($link, "SET NAMES 'utf8'");
 
-$query = "SELECT COUNT(*) as count FROM workers WHERE salary=400";
+$query = "SELECT * FROM pages WHERE athor LIKE '%ов'";
 
 $result = mysqli_query($link, $query) or die(mysqli_error($link));
 
