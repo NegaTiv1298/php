@@ -18,6 +18,14 @@ mysqli_query($link, "SET NAMES 'utf8'");
 	</tr>
 
 <?php
+if (!empty($_POST)) {
+    $name = $_POST['name'];
+    $age = $_POST['age'];
+    $salary = $_POST['salary'];
+    $query = "INSERT INTO workers SET name='$name', age='$age', salary='$salary'";
+    mysqli_query($link, $query) or die(mysqli_error($link));
+}
+
 if (isset($_GET['del'])) {
     $del = $_GET['del'];
     $query = "DELETE FROM workers WHERE id=$del";
@@ -47,3 +55,9 @@ foreach ($data as $elem) {
 echo $result;
 ?>
 </table>
+<form action="" method="post">
+    <input name="name">
+    <input name="age">
+    <input name="salary">
+    <input type="submit" value="добавить работника">
+</form>
