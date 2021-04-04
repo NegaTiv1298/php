@@ -8,19 +8,29 @@ $link = mysqli_connect($host, $user, $password, $db_name);
 
 mysqli_query($link, "SET NAMES 'utf8'");
 
+function input($name)
+{
+    if (isset($_POST[$name])) {
+        $value = $_POST[$name];
+    } else {
+        $value = '';
+    }
+    return '<input name="' .$name. '" value="' .$value. '">';
+}
+
 
 if (!empty($_POST)) {
-$name = $_POST['name'];
-$age = $_POST['age'];
-$salary = $_POST['salary'];
+  $name = $_POST['name'];
+  $age = $_POST['age'];
+  $salary = $_POST['salary'];
 
-$query = "INSERT INTO workers SET name='$name', age='$age', salary='$salary'";
-mysqli_query($link, $query) or die(mysqli_error($link));
+  $query = "INSERT INTO workers SET name='$name', age='$age', salary='$salary'";
+  mysqli_query($link, $query) or die(mysqli_error($link));
 }
 ?>
 <form action="" method="POST">
-    <input name="name" value="<?php if (isset($_POST['name'])) echo $_POST['name'];?>">
-    <input name="age" value="<?php if (isset($_POST['age'])) echo $_POST['age'];?>">
-    <input name="salary" value="<?php if (isset($_POST['salary'])) echo $_POST['salary'];?>">
+    <?php echo input('name'); ?>
+    <?php echo input('age'); ?>
+    <?php echo input('salary'); ?>
     <input type="submit" value="добавить работника">
 </form>
