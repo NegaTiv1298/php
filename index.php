@@ -8,7 +8,7 @@ $link = mysqli_connect($host, $user, $password, $db_name);
 
 mysqli_query($link, "SET NAMES 'utf8'");
 
-$query = "SELECT * FROM workers WHERE id>0 ORDER BY salary";
+$query = "SELECT * FROM workers WHERE id>0 ORDER BY salary DESC";
 
 $result = mysqli_query($link, $query) or die(mysqli_error($link));
 
