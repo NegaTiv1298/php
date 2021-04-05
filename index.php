@@ -14,8 +14,14 @@ mysqli_query($link, "SET NAMES 'utf8'");
     <th>name</th>
     <th>age</th>
     <th>salary</th>
+    <th>delete</th>
 </tr>
     <?php
+    if (isset($_GET['del'])) {
+        $del = $_GET['del'];
+        $query = "DELETE FROM workers WHERE id=$del";
+        mysqli_query($link, $query) or die(mysqli_error($link));
+    }
 
     $query = "SELECT * FROM workers";
     $result = mysqli_query($link, $query) or die(mysqli_error($link));
@@ -30,6 +36,7 @@ mysqli_query($link, "SET NAMES 'utf8'");
         $result .= '<td>'. $elem['name'] .'</td>';
         $result .= '<td>'. $elem['age'] .'</td>';
         $result .= '<td>'. $elem['salary'] .'</td>';
+        $result .= '<td> <a href="?del=' . $elem['id'] . '">удалить</td>';
 
         $result .= '</tr>';
     }
