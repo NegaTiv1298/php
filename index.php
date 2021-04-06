@@ -10,11 +10,12 @@ mysqli_query($link, "SET NAMES 'utf8'");
 ?>
 <table>
 <tr>
-    <th>id</th>
-    <th>name</th>
-    <th>age</th>
-    <th>salary</th>
-    <th>delete</th>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Salary</th>
+    <th>Delete</th>
+    <th>Update</th>
 </tr>
     <?php
     if (!empty($_POST)) {
@@ -31,6 +32,7 @@ mysqli_query($link, "SET NAMES 'utf8'");
         mysqli_query($link, $query) or die(mysqli_error($link));
     }
 
+
     $query = "SELECT * FROM workers";
     $result = mysqli_query($link, $query) or die(mysqli_error($link));
 
@@ -44,13 +46,15 @@ mysqli_query($link, "SET NAMES 'utf8'");
         $result .= '<td>'. $elem['name'] .'</td>';
         $result .= '<td>'. $elem['age'] .'</td>';
         $result .= '<td>'. $elem['salary'] .'</td>';
-        $result .= '<td> <a href="?del=' . $elem['id'] . '">удалить</td>';
+        $result .= '<td> <a name="del" href="?del=' . $elem['id'] . '">Удалить</td>';
+        $result .= '<td> <a name="upd" href="test.php?upd=' .$elem['id'].'">Редактировать</td>';
 
         $result .= '</tr>';
     }
     echo $result;
     ?>
 </table>
+<br>
 <form action="" method="post">
     <input name="name">
     <input name="age">

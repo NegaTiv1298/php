@@ -19,12 +19,14 @@ function input($name)
 }
 
 
-if (!empty($_POST)) {
-  $name = $_POST['name'];
-  $age = $_POST['age'];
-  $salary = $_POST['salary'];
 
-  $query = "INSERT INTO workers SET name='$name', age='$age', salary='$salary'";
+if (!empty($_POST) && isset($_GET['upd'])) {
+    $idUp = $_GET['upd'];
+    $name = $_POST['name'];
+    $age = $_POST['age'];
+    $salary = $_POST['salary'];
+
+  $query = "UPDATE workers SET name='$name', age='$age', salary='$salary' WHERE id=$idUp";
   mysqli_query($link, $query) or die(mysqli_error($link));
 }
 ?>
@@ -32,5 +34,8 @@ if (!empty($_POST)) {
     <?php echo input('name'); ?>
     <?php echo input('age'); ?>
     <?php echo input('salary'); ?>
-    <input type="submit" value="добавить работника">
+    <input type="submit" value="редактировать работника">
+    <br>
+    <a href="index.php">Вернуться на главную страницу</a>
 </form>
+
