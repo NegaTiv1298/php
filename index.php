@@ -1,18 +1,19 @@
 <?php
-class Employee
+class Rectangle
 {
-    public $name;
-    public $salary;
+    public $height;
+    public $width;
 
-    public function doubleSalary($salary)
+    public function getSquare()
     {
-        $this->salary = $salary;
+      return ($this->height * $this->width);
+    }
+    public function getPerimeter()
+    {
+        return ($this->height + $this->width) * 2;
     }
 }
-
-$user = new Employee;
-$user->name = 'Дима';
-$user->salary= 300;
-$user->salary *= 2;
-
-echo $user->salary;
+$a1 = new Rectangle;
+$a1->width = 2;
+$a1->height = 4;
+echo $a1->getPerimeter();
