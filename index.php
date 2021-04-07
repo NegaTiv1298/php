@@ -1,19 +1,18 @@
 <?php
-class User
+class Employee
 {
     public $name;
-    public $age;
+    public $salary;
 
-    public function setAge($age)
+    public function doubleSalary($salary)
     {
-        if ($age > 18) {
-            $this->age = $age;
-        }
+        $this->salary = $salary;
     }
 }
-$user = new User;
-$user->age = 24;
-$user->name = 'Коля';
-$user->setAge(19);
 
-echo $user->age;
+$user = new Employee;
+$user->name = 'Дима';
+$user->salary= 300;
+$user->salary *= 2;
+
+echo $user->salary;
