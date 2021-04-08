@@ -1,17 +1,41 @@
 <?php
 class Employee
 {
-    public $name;
-    public $age;
-    public $salary;
+    private $name;
+    private $age;
+    private $salary;
 
-    public function __construct($name,$age,$salary)
+    public function setName($name)
     {
         $this->name = $name;
-        $this->age = $age;
+    }
+    public function setAge($age)
+    {
+        if ($this->isAgeCorrect($age)) {
+            $this->age = $age;
+        }
+    }
+    public function setSalary($salary)
+    {
         $this->salary = $salary;
     }
+    public function getName()
+    {
+        return $this->name;
+    }
+    public function getAge()
+    {
+        return $this->age;
+    }
+    public function getSalary()
+    {
+        return $this->salary.'$';
+    }
+    private function isAgeCorrect($age)
+    {
+        return $age >= 1 and $age <= 100;
+    }
 }
-$user = new Employee('Дима', 25, 670);
-$user1 = new Employee('Вася', 23, 380);
-echo $user->salary + $user1->salary;
+$user = new Employee;
+$user->setSalary(760);
+echo $user->getSalary();
