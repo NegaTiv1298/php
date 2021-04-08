@@ -1,36 +1,16 @@
 <?php
-class Employee
-{
-    private $name;
-    private $age;
-    private $salary;
+require_once 'Employee.php';
 
-    public function setSalary($salary)
-    {
-        $this->salary = $salary;
-    }
-    public function getName()
-    {
-        return $this->name;
-    }
-    public function getSurname()
-    {
-        return $this->age;
-    }
-    public function getSalary()
-    {
-        return $this->salary.'$';
-    }
-    public function __construct($name, $surname, $salary)
-    {
-        $this->name = $name;
-        $this->age = $surname;
-        $this->salary = $salary;
-    }
-}
-$user = new Employee('Коля', 'Петров', 900);
-echo $user->getName();
-echo $user->getSurname();
-echo $user->getSalary();
-$user->setSalary(1100);
-echo $user->getSalary();
+$user = new Employee;
+$user->name = 'Дима';
+$user->surname = 'Петров';
+$user->patronymic = 'Андреевич';
+$user->salary = 600;
+
+$user1 = new Employee;
+$user1->name = 'Вася';
+$user1->surname = 'Дикров';
+$user1->patronymic = 'Васильевич';
+$user1->salary = 670;
+
+echo $user->salary + $user1->salary;
