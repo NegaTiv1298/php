@@ -1,16 +1,14 @@
 <?php
-require_once 'Employee.php';
+require_once 'City.php';
 
-$user = new Employee;
-$user->name = 'Дима';
-$user->surname = 'Петров';
-$user->patronymic = 'Андреевич';
-$user->salary = 600;
+$city = [
+    new City('Мукачево', 85000),
+    new City('Ужгород', 130000),
+    new City('Хуст', 28000),
+    new City('Іршава', 23000),
+    new City('Свалява', 19000)
+];
 
-$user1 = new Employee;
-$user1->name = 'Вася';
-$user1->surname = 'Дикров';
-$user1->patronymic = 'Васильевич';
-$user1->salary = 670;
-
-echo $user->salary + $user1->salary;
+foreach ($city as $elem) {
+    echo $elem->name. ' - '. $elem->population. '<br>';
+}
