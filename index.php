@@ -1,40 +1,22 @@
 <?php
-class User
+class Student
 {
+    public $course;
     public $name;
-    public $age;
 
-    public function isAgeCorrect($age)
+    public function transferToNextCourse($course)
     {
-        return $age >= 18 && $age <= 60;
-    }
-    public function setAge($age)
-    {
-        if ($this->isAgeCorrect($age)) {
-            $this->age = $age;
+        if ($this->isCourseCorrect($course)) {
+            $this->course = $course;
         }
     }
-    public function addAge($year)
+    private function isCourseCorrect($course)
     {
-        $newAge = $this->age + $year;
-        if ($this->isAgeCorrect($newAge)) {
-            $this->age = $newAge;
-        }
-    }
-    public function subAge($year)
-    {
-        $newAge = $this->age - $year;
-        if ($this->isAgeCorrect($newAge)) {
-            $this->age = $newAge;
-        }
+        return $course <= 5;
     }
 }
 
-$user = new User;
-$user->age = 30;
-$user->setAge(19);
-echo $user->age. '<br>';
-$user->addAge(10);
-echo $user->age. '<br>';
-$user->subAge(2);
-echo $user->age;
+$student = new Student;
+$student->course = 3;
+$student->transferToNextCourse(4);
+echo $student->course;
