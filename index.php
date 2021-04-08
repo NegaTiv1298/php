@@ -1,22 +1,17 @@
 <?php
-class Student
+class Employee
 {
-    public $course;
     public $name;
+    public $age;
+    public $salary;
 
-    public function transferToNextCourse($course)
+    public function __construct($name,$age,$salary)
     {
-        if ($this->isCourseCorrect($course)) {
-            $this->course = $course;
-        }
-    }
-    private function isCourseCorrect($course)
-    {
-        return $course <= 5;
+        $this->name = $name;
+        $this->age = $age;
+        $this->salary = $salary;
     }
 }
-
-$student = new Student;
-$student->course = 3;
-$student->transferToNextCourse(4);
-echo $student->course;
+$user = new Employee('Дима', 25, 670);
+$user1 = new Employee('Вася', 23, 380);
+echo $user->salary + $user1->salary;
