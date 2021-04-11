@@ -1,6 +1,4 @@
 <?php
-require_once 'User.php';
+require_once 'Arr.php';
 
-$user = new User('Дима', 24);
-$methods = ['method1' => 'getName', 'method2' => 'getAge'];
-echo $user->{$methods['method1']}(). $user->{$methods['method2']}();
+echo (new Arr([1,5,6]))->getSum() + (new Arr([5,15,1]))->getSum();

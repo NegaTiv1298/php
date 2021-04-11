@@ -3,12 +3,17 @@ class Arr
 {
     private $numbers = [];
 
-    public function add($arr = [])
+    public function __construct($numbers)
     {
-        $this->numbers = array_merge($this->numbers, $arr);
+        $this->numbers = $numbers;
     }
-    public function getAvg()
+    public function add($num)
     {
-        return array_sum($this->numbers)/count($this->numbers);
+        $this->numbers = $num;
+    }
+    public function getSum()
+    {
+        return array_sum($this->numbers);
     }
 }
+
