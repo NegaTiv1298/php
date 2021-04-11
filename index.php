@@ -1,8 +1,7 @@
 <?php
-require_once 'Student.php';
+require_once 'Arr.php';
 
-$student = new Student('Коля');
-echo $student->getName().'<br>';
-echo $student->getCourse(). ' Курс'. '<br>';
-$student->transferToNextCourse();
-echo $student->getCourse(). ' Курс'. '<br>';
+$arr = new Arr;
+
+$arr->add([10,10,5]);
+echo $arr->getAvg();
