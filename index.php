@@ -1,7 +1,6 @@
 <?php
-require_once 'City.php';
+require_once 'User.php';
 
-$city = new City('Мукачево', 1732, 85123);
-$props = ['name', 'foundation', 'population'];
-
-echo $city->{$props[0]}. ' - '. $city->{$props[1]}. ' - '. $city->{$props[2]};
+$user = new User('Дима', 24);
+$methods = ['method1' => 'getName', 'method2' => 'getAge'];
+echo $user->{$methods['method1']}(). $user->{$methods['method2']}();
