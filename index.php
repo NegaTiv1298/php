@@ -1,7 +1,8 @@
 <?php
-require_once 'Arr.php';
+require_once 'City.php';
 
-$arr = new Arr;
-
-$arr->add([10,10,5]);
-echo $arr->getAvg();
+$city = new City('Мукачево', 1732, 85123);
+$props = ['name', 'foundation', 'population'];
+foreach ($props as $elem) {
+    echo $city->$elem.'<br>';
+}
