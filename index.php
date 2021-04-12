@@ -1,10 +1,5 @@
 <?php
-require_once 'User.php';
+require_once 'ArrayAvgHelper.php';
 
-//$user = new User;
-//$user->setName('Николай');
-//$user->setSurname('Петров');
-//$user->setPatronymic('Петрович');
-//echo $user->getFullName();
-
-echo (new User)->setName('Николай')->setPatronymic('Иванович')->setSurname('Петров')->getFullName();
+$user = new ArrayAvgHelper;
+echo $user->getAvg3([1,2,3,5]);
