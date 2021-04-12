@@ -3,17 +3,20 @@ class Arr
 {
     private $numbers = [];
 
-    public function __construct($numbers)
-    {
-        $this->numbers = $numbers;
-    }
     public function add($num)
     {
-        $this->numbers = $num;
+        $this->numbers[] = $num;
+        return $this;
+    }
+    public function append($arr = [])
+    {
+        $this->numbers = array_merge($this->numbers, $arr);
     }
     public function getSum()
     {
         return array_sum($this->numbers);
     }
+
+
 }
 
