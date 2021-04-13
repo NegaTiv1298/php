@@ -1,17 +1,13 @@
 <?php
 require_once 'User.php';
 require_once 'Employee.php';
-require_once 'TestStudent.php';
+require_once 'Programmer.php';
 
-$employee = new Employee;
-$employee->setName('Дима');
-$employee->setAge(32);
-$employee->setSalary(1000);
-
-echo $employee->getName(). ' - '. $employee->getAge(). ' года. Зарплата: '. $employee->getSalary().'<br>';
-
-$student = new TestStudent;
-$student->setCourse(3);
-$student->setName('Коля');
-$student->setAge(22);
-echo $student->getName(). ' - '. $student->getAge(). ' года. Курс: '. $student->getCourse();
+$programmer = new Programmer;
+$programmer->setName('Коля');
+$programmer->setLangs('eng');
+$programmer->setLangs('rus');
+$programmer->setLangs('fr');
+var_dump($programmer->getLangs());
+echo $programmer->getName().'<br>';
+echo $programmer->getLangs();
