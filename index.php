@@ -1,13 +1,10 @@
 <?php
 require_once 'User.php';
 require_once 'Employee.php';
-require_once 'Programmer.php';
+require_once 'Driver.php';
 
-$programmer = new Programmer;
-$programmer->setName('Коля');
-$programmer->setLangs('eng');
-$programmer->setLangs('rus');
-$programmer->setLangs('fr');
-var_dump($programmer->getLangs());
-echo $programmer->getName().'<br>';
-echo $programmer->getLangs();
+$driver = new Driver;
+$driver->setName('Николай');
+$driver->setDriverExp(3);
+$driver->setDriverCt('A,B,C');
+echo $driver->getName(). '. Стаж вождения - ' . $driver->getDriverExp(). ' года.' . 'Категории : ' .$driver->getDriverCt();
