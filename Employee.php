@@ -1,8 +1,14 @@
 <?php
-class Employee
+class Employee extends User
 {
-    public $name;
-    public $surname;
-    public $patronymic;
-    public $salary;
+    private $salary;
+
+    public function setSalary($salary)
+    {
+        $this->salary = $salary.'$';
+    }
+    public function getSalary()
+    {
+        return $this->salary;
+    }
 }

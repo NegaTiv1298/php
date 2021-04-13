@@ -2,26 +2,22 @@
 class User
 {
     private $name;
-    private $surname;
-    private $patronymic;
+    private $age;
 
     public function setName($name)
     {
         $this->name = $name;
-        return $this;
     }
-    public function setSurname($surname)
+    public function getName()
     {
-        $this->surname = $surname;
-        return $this;
+        return $this->name;
     }
-    public function setPatronymic($patronymic)
+    public function setAge($age)
     {
-        $this->patronymic = $patronymic;
-        return $this;
+        $this->age = $age;
     }
-    public function getFullName()
+    public function getAge()
     {
-        return mb_substr($this->surname, 0, 1). mb_substr($this->name, 0, 1). mb_substr($this->patronymic, 0, 1);
+        return $this->age;
     }
 }
