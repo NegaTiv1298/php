@@ -6,7 +6,9 @@ class User
 
     public function setName($name)
     {
-        $this->name = $name;
+        if ((mb_strlen($name) >= 3)) {
+            $this->name = $name;
+        }
     }
     public function getName()
     {
