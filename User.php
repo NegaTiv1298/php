@@ -2,7 +2,7 @@
 class User
 {
     private $name;
-    private $age;
+    protected $age;
 
     public function setName($name)
     {

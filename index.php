@@ -1,10 +1,11 @@
 <?php
 require_once 'User.php';
 require_once 'Employee.php';
-require_once 'Driver.php';
+require_once 'StudenT.php';
 
-$driver = new Driver;
-$driver->setName('Николай');
-$driver->setDriverExp(3);
-$driver->setDriverCt('A,B,C');
-echo $driver->getName(). '. Стаж вождения - ' . $driver->getDriverExp(). ' года.' . 'Категории : ' .$driver->getDriverCt();
+$student = new StudenT;
+$student->setName('Коля');
+$student->setCourse(3);
+$student->setAge(23);
+$student->addOneYear();
+echo $student->getName(). '.' .$student->getAge(). ' года.'. $student->getCourse();
