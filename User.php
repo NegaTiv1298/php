@@ -2,21 +2,17 @@
 class User
 {
     private $name;
-    protected $age;
+    private $age;
 
-    public function setName($name)
+    public function __construct($name, $age)
     {
-        if ((mb_strlen($name) >= 3)) {
-            $this->name = $name;
-        }
+        $this->name = $name;
+        $this->age = $age;
     }
+
     public function getName()
     {
         return $this->name;
-    }
-    public function setAge($age)
-    {
-        $this->age = $age;
     }
     public function getAge()
     {
