@@ -2,12 +2,14 @@
 class User
 {
     private $name;
-    private $age;
+    private $surname;
+    private $birthday;
 
-    public function __construct($name, $age)
+    public function __construct($name, $surname, $birthday)
     {
         $this->name = $name;
-        $this->age = $age;
+        $this->surname = $surname;
+        $this->birthday = date('Y-m-d', strtotime($birthday));
     }
 
     public function getName()
@@ -16,6 +18,17 @@ class User
     }
     public function getAge()
     {
-        return $this->age;
+        return $this->surname;
+    }
+    public function getBirthday()
+    {
+        return $this->birthday;
+    }
+    public function calculateAge()
+    {
+        $birth = time() - strtotime($this->birthday);
+        $date = floor($birth / (60*60*24*365));
+
+        return $date.' год';
     }
 }

@@ -3,5 +3,6 @@ require_once 'User.php';
 require_once 'Employee.php';
 require_once 'StudenT.php';
 
-$student = new StudenT('Коля', 23, 3);
-echo $student->getName(). ' '. $student->getAge(). ' '. $student->getCourse();
+$user = new User('Коля', 'Петров', '1998-04-16');
+echo $user->getBirthday(). '<br>';
+echo $user->calculateAge();
