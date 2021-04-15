@@ -1,22 +1,27 @@
 <?php
 class Arr
 {
-    private $numbers = [];
+    private $num = [];
+    private $sumHelper;
+    private $avgHelper;
 
-    public function add($num)
+    public function __construct()
     {
-        $this->numbers[] = $num;
-        return $this;
+        $this->sumHelper = new SumHelper;
+        $this->avgHelper = new AvgHelper;
     }
-    public function append($arr = [])
+    public function getSum23()
     {
-        $this->numbers = array_merge($this->numbers, $arr);
-    }
-    public function getSum()
-    {
-        return array_sum($this->numbers);
+        $nums = $this->num;
+        return $this->sumHelper->getSum2($nums) + $this->sumHelper->getSum3($nums);
     }
 
-
+    public function add($number)
+    {
+        $this->num[] = $number;
+    }
+    public function getAvgMeanSum()
+    {
+        return $this->avgHelper->getAvg($this->num) + $this->avgHelper->getMeanSquare($this->num);
+    }
 }
-
