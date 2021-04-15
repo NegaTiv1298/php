@@ -3,12 +3,14 @@ class Employee extends User
 {
     private $salary;
 
-    public function setSalary($salary)
+    public function __construct($name, $surname, $birthday, $salary)
     {
-        $this->salary = $salary.'$';
+        parent::__construct($name, $surname, $birthday);
+        $this->salary = $salary;
     }
+
     public function getSalary()
     {
-        return $this->salary;
+        return $this->salary. '$';
     }
 }
