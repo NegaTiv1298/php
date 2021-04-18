@@ -1,21 +1,15 @@
 <?php
-require_once 'User.php';
+require_once 'Product.php';
 require_once 'AvgHelper.php';
 require_once 'SumHelper.php';
-require_once 'Arr.php';
+require_once 'Cart.php';
 
-//$user = new User('Коля', 'Петров', '1996-04-16');
-//echo $user->getBirthday(). '<br>';
-//echo $user->getAge(). '<br>';
-//
-//$employee = new Employee('Дима', 'Михайлов', 1992-02-18, 1000);
-//echo $employee->getName(). '<br>';
-//echo $employee->getBirthday(). '<br>';
-//echo $employee->getAge(). '<br>';
-//echo $employee->getSalary();
+//$phone = new Product('Телефон', 100, 3);
+//$tv = new Product('Телевизор', 900, 2);
 
-$arr = new Arr(); // создаем объект
-
-$arr->add(12);
-$arr->add(3);
-echo $arr->getAvgMeanSum();
+$cart = new Cart;
+$cart->add(new Product('Телефон', 100, 3));
+$cart->add(new Product('Телевизор', 900, 2));
+echo $cart->getTotalCost();
+echo $cart->getTotalQuantity();
+echo $cart->getAvgPrice();
