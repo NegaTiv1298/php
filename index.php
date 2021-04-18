@@ -4,12 +4,21 @@ require_once 'AvgHelper.php';
 require_once 'SumHelper.php';
 require_once 'Cart.php';
 
-//$phone = new Product('Телефон', 100, 3);
-//$tv = new Product('Телевизор', 900, 2);
+function compare1($obj1, $obj2)
+{
+    return $obj1 == $obj2;
+}
+function compare2($obj1, $obj2)
+{
+    return $obj1 === $obj2;
+}
+function compare3($obj1, $obj2)
+{
+    if ($obj1 === $obj2)
+        return 1;
+    if ($obj1 == $obj2)
+        return 0;
+    return -1;
 
-$cart = new Cart;
-$cart->add(new Product('Телефон', 100, 3));
-$cart->add(new Product('Телевизор', 900, 2));
-echo $cart->getTotalCost();
-echo $cart->getTotalQuantity();
-echo $cart->getAvgPrice();
+
+}
