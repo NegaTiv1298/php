@@ -1,16 +1,22 @@
 <?php
-class Employee extends User
+class Employee
 {
+    private $name;
     private $salary;
 
-    public function __construct($name, $surname, $birthday, $salary)
+    public function __construct($name, $salary)
     {
-        parent::__construct($name, $surname, $birthday);
+        $this->name = $name;
         $this->salary = $salary;
+    }
+
+    public function getName()
+    {
+        return $this->name;
     }
 
     public function getSalary()
     {
-        return $this->salary. '$';
+        return $this->salary;
     }
 }
