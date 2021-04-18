@@ -5,21 +5,13 @@ class EmployeesCollection
 
     public function add($newEmployee)
     {
-        if (!$this->exist($newEmployee)) {
-            $this->employees = $newEmployee;
+        if (!in_array($newEmployee, $this->employees, false)) {
+            $this->employees[] = $newEmployee;
         }
     }
     public function get()
     {
         return $this->employees;
     }
-    private function exist($newEmployee)
-    {
-        foreach ($this->employees as $employee) {
-            if ($employee == $newEmployee) {
-                return true;
-            }
-            return false;
-        }
-    }
+
 }
