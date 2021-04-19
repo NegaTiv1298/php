@@ -1,0 +1,12 @@
+<?php
+class StudenT
+{
+    public $name;
+    public $scholarship;
+
+    public function __construct($name, $scholarship)
+    {
+        $this->name = $name;
+        $this->scholarship = $scholarship;
+    }
+}
