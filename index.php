@@ -3,37 +3,21 @@ require_once 'User.php';
 require_once 'Employee.php';
 require_once 'StudenT.php';
 require_once 'Employee2.php';
-require_once 'City.php';
+require_once 'UsersCollection.php';
 
-$arr = [
-new User('Коля', 'Петров'),
-new User('Петя', 'Николаев'),
-new User('Иосиф', 'Сталин'),
+$usersCollection = new UsersCollection;
 
-new Employee2('Вася', 'Пупкин', 230),
-new Employee2('Коля', 'Шпаков', 270),
-new Employee2('Петя', 'Шип', 370),
+$usersCollection->add(new Student('Петя', 100));
+$usersCollection->add(new Student('Ваня', 200));
 
-    new City('Мукачево', 83000),
-    new City('Ужгород', 140000),
-    new City('Хуст', 29000)
-];
+$usersCollection->add(new Employee('Коля', 300));
+$usersCollection->add(new Employee('Вася', 400));
 
-foreach ($arr as $elem) {
-    if ($elem instanceof User) {
-        echo $elem->name. '<br>';
-    }
-}
-echo '<br>';
-foreach ($arr as $elem) {
-    if (!$elem instanceof User) {
-        echo $elem->name, '<br>';
-    }
-}
-echo '<br>';
 
-foreach ($arr as $elem) {
-    if (!$elem instanceof Employee2 and !$elem instanceof City) {
-        echo $elem->name;
-    }
-}
+echo $usersCollection->getTotalScholarship().'<br>';
+
+
+echo $usersCollection->getTotalSalary().'<br>';
+
+
+echo $usersCollection->getTotalPayment();
