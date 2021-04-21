@@ -2,10 +2,10 @@
 require_once 'User.php';
 require_once 'Employee.php';
 require_once 'Post.php';
-require_once 'Employee2.php';
+require_once 'Num.php';
 require_once 'UsersCollection.php';
 
-$arr = [2,3,4];
 
-echo ArrSumHelper::getSum2($arr);
-
+Num::$num1 = 1;
+Num::$num2 = 2;
+echo Num::$num1 + Num::$num2;
