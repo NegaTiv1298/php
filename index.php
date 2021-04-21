@@ -8,3 +8,4 @@ require_once 'UsersCollection.php';
 $arr = [2,3,4];
 
 echo ArrSumHelper::getSum2($arr);
+
