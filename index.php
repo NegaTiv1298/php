@@ -1,12 +1,10 @@
 <?php
-require_once 'User.php';
+require_once 'Circle.php';
 require_once 'Employee.php';
 require_once 'Post.php';
 require_once 'Geometry.php';
 require_once 'UsersCollection.php';
 
-
-$user1 = new User('Коля');
-echo User::getCount();
-$user2 = new User('Петя');
-echo User::getCount();
+$circle = new Circle(10);
+echo $circle->getCircuit(10).'<br>';
+echo $circle->getSquare(10);
