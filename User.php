@@ -1,33 +1,16 @@
 <?php
-class ArrSumHelper
+class User
 {
-    public static function getSum1($arr)
+    private static $count = 0;
+    public $name;
+
+    public function __construct($name)
     {
-        return self::getSum($arr, 1);
+        $this->name = $name;
+        self::$count++;
     }
-
-    public static function getSum2($arr)
+    public static function getCount()
     {
-        return self::getSum($arr, 2);
-    }
-
-    public static function getSum3($arr)
-    {
-        return self::getSum($arr, 3);
-    }
-
-    public static function getSum4($arr)
-    {
-        return self::getSum($arr, 4);
-    }
-
-    private static function getSum($arr, $power) {
-        $sum = 0;
-
-        foreach ($arr as $elem) {
-            $sum += pow($elem, $power);
-        }
-
-        return $sum;
+        return self::$count;
     }
 }

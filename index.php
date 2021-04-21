@@ -6,4 +6,7 @@ require_once 'Geometry.php';
 require_once 'UsersCollection.php';
 
 
-echo Geometry::vCircle(10);
+$user1 = new User('Коля');
+echo User::getCount();
+$user2 = new User('Петя');
+echo User::getCount();
