@@ -1,21 +1,17 @@
 <?php
-require_once 'Test1.php';
+require_once 'Test.php';
 require_once 'Employee.php';
 require_once 'Post.php';
 require_once 'Test2.php';
 require_once 'UsersCollection.php';
 
-$arr = [
-  new Test1('tes1'),
-  new Test1('test11'),
-  new Test2('test2'),
-  new Test2('test22')
-];
-foreach ($arr as $elem) {
-    if ($elem instanceof Test1) {
-        echo $elem->name. '-' . get_class($elem).'<br>';
-    }
-    if ($elem instanceof Test2) {
-        echo $elem->name. '-' . get_class($elem).'<br>';
-    }
+//$class = get_class_methods(Test::class);
+//foreach ($class as $elem) {
+//    echo $elem.'<br>';
+//}
+
+$test = new Test;
+$classArr = get_class_methods(Test::class);
+foreach ($classArr as $elem) {
+    echo $test->method1(). $test->method2(). $test->method3().'<br>';
 }
