@@ -6,7 +6,5 @@ require_once 'Test2.php';
 require_once 'UsersCollection.php';
 
 $class = new Test();
-$classVars = get_class_vars(get_class($class));
-foreach ($classVars as $elem) {
-    echo $elem;
-}
+$arr = get_object_vars($class);
+var_dump($arr);
