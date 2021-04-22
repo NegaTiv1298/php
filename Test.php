@@ -1,10 +1,14 @@
 <?php
-class Test1
+class Test
 {
-    public $name;
+    public $prop1 = 1;
+    public $prop2 = 2;
+    private $prop3;
+    private $prop4;
 
-    public function __construct($name)
+    public function __construct()
     {
-        $this->name = $name;
+        
     }
+
 }
