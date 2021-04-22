@@ -5,11 +5,15 @@ require_once 'Post.php';
 require_once 'Test2.php';
 require_once 'UsersCollection.php';
 
-if (class_exists(Test::class)) {
-    echo 'Есть';
+
+//var_dump(property_exists('Test', 'prop1'));
+//var_dump(property_exists('Test', 'prop2'));
+
+$arr = ['prop', 'prop1', 'prop2', 'prop3'];
+$class = new Test();
+foreach ($arr as $elem) {
+    if (property_exists($class, $elem)) {
+       $classVars = get_class_vars(get_class($class));
+    }
 }
-if (class_exists(Test3::class)) {
-    echo 'Есть';
-} else {
-    echo 'Нету';
-}
+var_dump($classVars);
