@@ -5,6 +5,11 @@ require_once 'Post.php';
 require_once 'Test2.php';
 require_once 'UsersCollection.php';
 
-$class = new Test();
-$arr = get_object_vars($class);
-var_dump($arr);
+if (class_exists(Test::class)) {
+    echo 'Есть';
+}
+if (class_exists(Test3::class)) {
+    echo 'Есть';
+} else {
+    echo 'Нету';
+}
