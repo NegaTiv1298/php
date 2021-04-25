@@ -7,12 +7,14 @@ require_once 'UsersCollection.php';
 require_once 'GrandParentClass.php';
 
 $child = new ChildClass('child');
-$parent = new ParentClass();
-$grParent = new GrandParentClass();
 
-if (is_subclass_of($child, 'GrandParentClass')) {
-    echo "ChildClass потомок GrandParentClass";
-}
-if (is_subclass_of($child, 'ParentClass')) {
+if (is_a($child, 'ParentClass')) {
     echo 'true';
+} else {
+    echo 'false';
+}
+if (is_a($child, 'ChildClass')) {
+    echo 'true';
+} else {
+    echo 'false';
 }
