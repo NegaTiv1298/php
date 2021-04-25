@@ -1,5 +1,5 @@
 <?php
-class Test
+class ParentClass
 {
     public $prop1 = 1;
     public $prop2 = 3;

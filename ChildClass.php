@@ -1,5 +1,5 @@
 <?php
-class Test2
+class ChildClass extends ParentClass
 {
     public $name;
 
