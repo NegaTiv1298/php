@@ -1,5 +1,5 @@
 <?php
-class ParentClass
+class ParentClass extends GrandParentClass
 {
     public $prop1 = 1;
     public $prop2 = 3;
