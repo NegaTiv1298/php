@@ -6,8 +6,14 @@ require_once 'Test2.php';
 require_once 'UsersCollection.php';
 
 $class = $_GET['class'];
+$method = $_GET['method'];
 if (class_exists($class)) {
-    echo 'Есть';
+    if (method_exists($class, $method)) {
+        $user = new Test;
+        echo $user->$method();
+    } else {
+        echo 'Данный метод не найден';
+    }
 } else {
-    echo 'Нету';
+    echo 'Данный класс не найден';
 }
