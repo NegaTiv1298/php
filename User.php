@@ -1,16 +1,16 @@
 <?php
-class User
+abstract class User
 {
-    private static $count = 0;
-    public $name;
+    private $name;
 
-    public function __construct($name)
+    public function getName()
+    {
+        return $this->name;
+    }
+    public function setName($name)
     {
         $this->name = $name;
-        self::$count++;
     }
-    public static function getCount()
-    {
-        return self::$count;
-    }
+    abstract public function increaseRevenue($value);
+    abstract public function decreaseRevenue($value);
 }

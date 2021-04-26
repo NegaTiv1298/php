@@ -1,44 +1,26 @@
 <?php
-class Employee
+class Employee extends User
 {
-    private $name;
-    private $surname;
-    private $post;
+    private $salary;
 
-    public function __construct($name, $surname, Post $post)
+    public function getSalary()
     {
-        $this->name = $name;
-        $this->surname = $surname;
-        $this->post = $post;
-    }
-    public function changePost(Post $post)
-    {
-        if ($post instanceof Post) {
-            $this->post = $post;
-        }
+        return $this->salary;
     }
 
     /**
-     * @param mixed $name
+     * @param mixed $salary
      */
-    public function setName($name): void
+    public function setSalary($salary): void
     {
-        $this->name = $name;
+        $this->salary = $salary;
     }
-
-    /**
-     * @param mixed $surname
-     */
-    public function setSurname($surname): void
+    public function increaseRevenue($value)
     {
-        $this->surname = $surname;
+        return $this->salary += $value;
     }
-    public function getName()
+    public function decreaseRevenue($value)
     {
-        return $this->name;
-    }
-    public function getSurname()
-    {
-        return $this->surname;
+        return $this->salary -= $value;
     }
 }
