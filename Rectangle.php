@@ -1,5 +1,5 @@
 <?php
-class Rectangle implements iFigure
+class Rectangle implements iFigure, Tetragon
 {
     private $a;
     private $b;
@@ -8,6 +8,23 @@ class Rectangle implements iFigure
         $this->a = $a;
         $this->b = $b;
     }
+    public function getA()
+    {
+        return $this->a;
+    }
+    public function getB()
+    {
+        return $this->b;
+    }
+    public function getC()
+    {
+        return $this->a;
+    }
+    public function getD()
+    {
+        return $this->b;
+    }
+
     public function getSquare()
     {
         return $this->a * $this->b;

@@ -1,5 +1,5 @@
 <?php
-class Disk implements Figure
+class Disk implements iFigure, Circle
 {
     private $radius;
     public function __construct($radius)
@@ -15,5 +15,12 @@ class Disk implements Figure
     {
         return 2 * pi() * $this->radius;
     }
+    public function getDiameter()
+    {
+        return 2 * ($this->getPerimeter() / (2 * pi()));
+    }
+    public function getRadius()
+    {
+        return $this->radius;
+    }
 }
-
