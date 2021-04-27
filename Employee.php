@@ -1,26 +1,31 @@
 <?php
-class Employee extends User
+class Employee implements iEmployee
 {
+    private $name;
+    private $age;
     private $salary;
-
-    public function getSalary()
+    public function setName($name)
     {
-        return $this->salary;
+        $this->name = $name;
     }
-
-    /**
-     * @param mixed $salary
-     */
-    public function setSalary($salary): void
+    public function setAge($age)
+    {
+        $this->age = $age;
+    }
+    public function setSalary($salary)
     {
         $this->salary = $salary;
     }
-    public function increaseRevenue($value)
+    public function getName()
     {
-        return $this->salary += $value;
+        return $this->name;
     }
-    public function decreaseRevenue($value)
+    public function getAge()
     {
-        return $this->salary -= $value;
+        return $this->age;
+    }
+    public function getSalary()
+    {
+        return $this->salary;
     }
 }

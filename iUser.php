@@ -1,7 +1,8 @@
 <?php
 interface iUser
 {
-    public function __construct($name, $age);
+    public function setName($name);
+    public function setAge($age);
 
     public function getName(); // получить имя
     public function getAge(); // получить возраст
