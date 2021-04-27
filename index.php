@@ -9,6 +9,14 @@ require_once 'iSphere.php';
 require_once 'Sphere.php';
 
 
-$sphere = new Sphere(5);
-echo $sphere->getSquare().'<br>';
-echo $sphere->getVolume();
+if (interface_exists(Tetragon::class)) {
+    echo 'true';
+}
+echo '<br>';
+
+if (interface_exists(Tetragon1::class)) {
+    echo 'true';
+} else {
+    echo 'false';
+}
+var_dump(get_declared_interfaces());
