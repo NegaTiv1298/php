@@ -1,18 +1,17 @@
 <?php
-class Cube implements iCube
+class Cube implements iFigure3d
 {
     private $a;
-
     public function __construct($a)
     {
         $this->a = $a;
     }
-    public function getSquare()
-    {
-        return 6 * pow($this->a, 2);
-    }
-    public function getVCube()
+    public function getVolume()
     {
         return pow($this->a, 3);
+    }
+    public function getSurfaceSquare()
+    {
+        return 6 * pow($this->a, 2);
     }
 }
