@@ -1,13 +1,14 @@
 <?php
 require_once 'iUser.php';
-require_once 'Disk.php';
+require_once 'iCube.php';
 require_once 'Post.php';
-require_once 'Rectangle.php';
+require_once 'Cube.php';
 require_once 'FiguresCollection.php';
 require_once 'iUser.php';
 require_once 'User.php';
 
-$user = new User();
-$user->setAge(32);
-$user->setName('User');
-echo $user->getName(). ' - '. $user->getAge();
+$user = new User('Коля', 23);
+echo $user->getName(). ' - '. $user->getAge().'<br>';
+$cube = new Cube(5);
+echo $cube->getSquare(). ' - площадь куба'.'<br>';
+echo $cube->getVCube(). ' - объем куба';

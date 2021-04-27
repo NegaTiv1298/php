@@ -3,13 +3,10 @@ class User implements iUser
 {
     private $name;
     private $age;
-    public function setAge($age)
-    {
-        $this->age = $age;
-    }
-    public function setName($name)
+    public function __construct($name, $age)
     {
         $this->name = $name;
+        $this->age = $age;
     }
     public function getAge()
     {
