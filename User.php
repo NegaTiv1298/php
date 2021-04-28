@@ -1,15 +1,16 @@
 <?php
 class User
 {
-    private $numbers = [];
+    private $name;
+    private $age;
 
-    public function add($num)
+    public function __construct($name, $age)
     {
-        $this->numbers[] = $num;
-        return $this;
+        $this->name = $name;
+        $this->age = $age;
     }
-    public function __toString()
+    public function __get($prop)
     {
-        return (string) array_sum($this->numbers);
+        return $this->$prop;
     }
 }

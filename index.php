@@ -1,6 +1,6 @@
 <?php
 require_once 'Employee.php';
-require_once 'Trait1.php';
+require_once 'Date.php';
 require_once 'Trait2.php';
 require_once 'Trait3.php';
 require_once 'iFigure.php';
@@ -10,6 +10,8 @@ require_once 'Programmer.php';
 require_once 'iSphere.php';
 require_once 'Sphere.php';
 
-$user = new User();
-echo $user->add(2)->add(3)->add(10);
-
+$date = new Date();
+$date->month = 28;
+$date->day = 04;
+$date->year = 2021;
+echo $date->name;
