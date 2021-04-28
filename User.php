@@ -1,19 +1,18 @@
 <?php
-class User implements iUser
+class User
 {
     private $name;
-    private $age;
-    public function __construct($name, $age)
+    private $surname;
+    private $patronymic;
+
+    public function __construct($name, $surname, $patronymic)
     {
         $this->name = $name;
-        $this->age = $age;
+        $this->surname = $surname;
+        $this->patronymic = $patronymic;
     }
-    public function getAge()
+    public function __toString()
     {
-        return $this->age;
-    }
-    public function getName()
-    {
-        return $this->name;
+        return $this->surname .  ' - '. $this->name. ' - '. $this->patronymic;
     }
 }
