@@ -10,8 +10,8 @@ require_once 'Programmer.php';
 require_once 'iSphere.php';
 require_once 'Sphere.php';
 
-$date = new Date();
-$date->month = 28;
-$date->day = 04;
-$date->year = 2021;
-echo $date->name;
+$user = new User();
+$user->name = 'Kolya';
+$user->age = 23;
+echo $user->name;
+echo $user->age;

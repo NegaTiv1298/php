@@ -4,13 +4,28 @@ class User
     private $name;
     private $age;
 
-    public function __construct($name, $age)
+    public function __set($property, $value)
     {
-        $this->name = $name;
-        $this->age = $age;
+        switch ($property) {
+            case 'name';
+            if (empty($this->name)) {
+                $this->name = $value;
+            }
+            break;
+            case 'age';
+            if ($this->age >= 0 && $this->age <= 70) {
+                $this->age = $value;
+            }
+            break;
+        }
     }
-    public function __get($prop)
+    public function __get($name)
     {
-        return $this->$prop;
+        switch ($name) {
+            case 'name';
+            return $this->name;
+            case 'age';
+            return $this->age;
+        }
     }
 }
