@@ -10,5 +10,6 @@ require_once 'Programmer.php';
 require_once 'iSphere.php';
 require_once 'Sphere.php';
 
-$user = new User('Коля', 'Петров', 'Иванович');
-echo $user;
+$user = new User();
+echo $user->add(2)->add(3)->add(10);
+

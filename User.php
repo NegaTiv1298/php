@@ -1,18 +1,15 @@
 <?php
 class User
 {
-    private $name;
-    private $surname;
-    private $patronymic;
+    private $numbers = [];
 
-    public function __construct($name, $surname, $patronymic)
+    public function add($num)
     {
-        $this->name = $name;
-        $this->surname = $surname;
-        $this->patronymic = $patronymic;
+        $this->numbers[] = $num;
+        return $this;
     }
     public function __toString()
     {
-        return $this->surname .  ' - '. $this->name. ' - '. $this->patronymic;
+        return (string) array_sum($this->numbers);
     }
 }
