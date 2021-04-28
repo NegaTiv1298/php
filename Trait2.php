@@ -1,8 +1,9 @@
 <?php
 trait Trait2
 {
-    private function met()
+    use Trait1;
+    public function method3()
     {
-        return 2;
+        return 3;
     }
 }

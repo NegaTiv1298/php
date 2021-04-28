@@ -1,8 +1,12 @@
 <?php
 trait Trait1
 {
-    private function method()
+    public function method()
     {
         return 1;
+    }
+    public function method2()
+    {
+        return 22;
     }
 }
