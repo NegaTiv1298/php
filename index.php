@@ -1,5 +1,5 @@
 <?php
-require_once 'Employee.php';
+require_once 'FileManipulator.php';
 require_once 'iFile.php';
 require_once 'Date.php';
 require_once 'Interval.php';
@@ -10,9 +10,7 @@ require_once 'User.php';
 require_once 'CookieShell.php';
 require_once 'Sphere.php';
 
-$session = new SessionShell();
-//$session->set('Test', '123');
-echo $session->get('Test');
-//$session->del('Test');
-echo $session->exists('Test');
-$session->destroy();
+$file = new FileManipulator();
+$file->create('text.txt');
+$file->rename('text.txt', 'Text.txt');
+echo $file->weigh('Text.txt');
